@@ -17,8 +17,7 @@ set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 
 
-"dein Scripts-----------------------------
-let s:dein_dir = expand('~/.vim/bundle')
+let s:dein_dir = $HOME . '/.vim/bundle'
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 if &runtimepath !~# '/dein.vim'
@@ -41,7 +40,6 @@ endif
 
 
 filetype plugin indent on
-colorscheme molokai
 syntax enable
 
 " If you want to install not installed plugins on startup.
@@ -49,7 +47,7 @@ if dein#check_install()
   call dein#install()
 endif
 
-  "End dein Scripts-------------------------
+  " End dein Scripts-------------------------
 
 " autocmd VimEnter * execute 'NERDTree'
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

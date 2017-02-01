@@ -17,8 +17,8 @@ set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 
 
-let s:dein_dir = $HOME . '/.vim/bundle'
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+let s:dein_dir = $HOME
+let s:dein_repo_dir = s:dein_dir . '/.vim/bundle/repos/github.com/Shougo/dein.vim'
 
 if &runtimepath !~# '/dein.vim'
   if !isdirectory(s:dein_repo_dir)
@@ -32,8 +32,8 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   " Load and cached toml
   " all plugins listed in toml
-  call dein#load_toml('~/.vim/bundle/rc/dein.toml', {'lazy': 0})
-  call dein#load_toml('~/.vim/bundle/rc/dein_lazy.toml', {'lazy': 1})
+  call dein#load_toml(s:dein_dir . '/.vim/bundle/rc/dein.toml', {'lazy': 0})
+  call dein#load_toml(s:dein_dir . '/.vim/bundle/rc/dein_lazy.toml', {'lazy': 1})
   call dein#end()
   call dein#save_state()
 endif
@@ -47,7 +47,6 @@ if dein#check_install()
   call dein#install()
 endif
 
-  " End dein Scripts-------------------------
 
 " autocmd VimEnter * execute 'NERDTree'
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

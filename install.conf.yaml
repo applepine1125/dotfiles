@@ -1,19 +1,16 @@
-- defaults:
-  link:
-    relink: true
-
 - clean: ['~']
 
 - link:
-  ~/.dotfiles: ''
-  ~/.vim: vim/.vim
-  ~/.vimrc: vim/.vimrc
-  ~/.zlogin: zsh/.zlogin
-  ~/.zlogout: zsh/.zlogout
-  ~/.zpreztorc: zsh/.zpreztorc
-  ~/.zprofile: zsh/.zprofile
-  ~/.zshenv: zsh/.zshenv
-  ~/.zshrc: zsh/.zshrc
+    ~/.dotfiles: ''
+    ~/.zprezto: zsh/zprezto/
+    ~/.vim: vim/.vim/
+    ~/.vimrc: vim/.vimrc
+    ~/.zlogin: zsh/.zlogin
+    ~/.zlogout: zsh/.zlogout
+    ~/.zpreztorc: zsh/.zpreztorc
+    ~/.zprofile: zsh/.zprofile
+    ~/.zshenv: zsh/.zshenv
+    ~/.zshrc: zsh/.zshrc
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --init --recursive, Installing submodules]

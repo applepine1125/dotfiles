@@ -61,6 +61,7 @@ eval "$(rbenv init -)"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export GOBIN=$GOPATH/bin
 export PATH=$GOPATH:$GOBIN:$PATH
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 export NVM_DIR="/Users/matsuyuki/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

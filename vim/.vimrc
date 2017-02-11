@@ -1,3 +1,4 @@
+" set params
 set nobackup
 set noswapfile
 set autoread
@@ -17,6 +18,7 @@ set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 
 
+" dein detup
 let s:dein_dir = $HOME
 let s:dein_repo_dir = s:dein_dir . '/.vim/bundle/repos/github.com/Shougo/dein.vim'
 
@@ -26,7 +28,6 @@ if &runtimepath !~# '/dein.vim'
   endif
   execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
-
 
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
@@ -38,7 +39,6 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
-
 filetype plugin indent on
 syntax enable
 
@@ -46,7 +46,6 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
-
 
 " autocmd VimEnter * execute 'NERDTree'
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

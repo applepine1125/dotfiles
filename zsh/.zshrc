@@ -64,8 +64,3 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export GOBIN=$GOPATH/bin
 export PATH=$GOPATH:$GOBIN:$PATH
-
-#nvm
-#export NVM_DIR="/Users/matsuyuki/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-#

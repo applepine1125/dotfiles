@@ -1,9 +1,3 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 #vi bind
 #bindkey -v
 
@@ -30,6 +24,7 @@ if [ -e /usr/local/share/zsh-completions ]; then
 fi
 # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 # 補完候補を詰めて表示
 setopt list_packed
 
@@ -51,18 +46,26 @@ alias less='less -NM'
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-export GOPATH=$HOME/go
-export PATH=$PATH:/usr/local/go/bin
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$PATH
+#cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-export NVM_DIR="/Users/matsuyuki/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#anyenv
+if [ -d ${HOME}/.anyenv ] ; then
+  export PATH="$HOME/.anyenv/bin:$PATH"
+  eval "$(anyenv init -)"
+  for D in `ls $HOME/.anyenv/envs`
+  do
+    export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
+  done
+fi
 
+#golang
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin
+export GOBIN=$GOPATH/bin
+export PATH=$GOPATH:$GOBIN:$PATH
+
+#nvm
+#export NVM_DIR="/Users/matsuyuki/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#

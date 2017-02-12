@@ -1,7 +1,9 @@
-cask_args appdir: '/Applications'
+tap 'caskroom/cask'
+tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/versions'
 tap 'sanemat/font'
+cask 'xquartz'
 brew 'autoconf'
 brew 'libpng'
 brew 'freetype'
@@ -39,20 +41,25 @@ brew 'oniguruma'
 brew 'jq'
 brew 'libsodium'
 brew 'lua'
+brew 'mas'
 brew 'openssl'
+brew 'mongodb'
+brew 'mysql'
+brew 'nkf'
 brew 'readline'
+brew 'postgresql'
+brew 'ruby-build'
 brew 'ssh-copy-id'
 brew 'xz'
+brew 'the_silver_searcher'
 brew 'uncrustify'
 brew 'vim', args: ['with-lua']
 brew 'zsh'
 brew 'zsh-completions'
-brew 'mas'
-brew 'sanemat/font/ricty', args: ['powerline', 'vim-powerline']
-cask 'adobe-acrobat'
+brew 'homebrew/versions/redis28'
+brew 'sanemat/font/ricty', args: ['vim-powerline', 'with-powerline']
 cask 'adobe-creative-cloud'
 cask 'adobe-creative-cloud-cleaner-tool'
-cask 'adobe-reader'
 cask 'appcleaner'
 cask 'arduino'
 cask 'atom'
@@ -60,21 +67,18 @@ cask 'bettertouchtool'
 cask 'dropbox'
 cask 'flux'
 cask 'google-chrome'
-cask 'google-photos-backup'
 cask 'google-japanese-ime'
+cask 'licecap'
+cask 'magicavoxel'
 cask 'mamp'
 cask 'mp3gain-express'
-cask 'playonmac'
+cask 'night-owl'
 cask 'skype'
-cask 'slack'
-cask 'spotify'
-cask 'the-unarchiver'
-cask 'tunnelblick'
-mas 'Keynote', id:409183694
-mas 'Wunderlist', id:410628904
-mas 'Xcode', id:497799835
-mas 'WeatherBug', id:1059074180
-mas 'Memory Clean 2', id:1114591412
-mas 'LINE', id:539883307
-mas 'Fusion360', id:868968810
-mas  'Disk Diag', id:672206759
+mas 'Microsoft Remote Desktop', id: 715768417
+mas 'Fusion360', id: 868968810
+mas 'Memory Clean 2', id: 1114591412
+mas 'Xcode', id: 497799835
+mas 'Keynote', id: 409183694
+mas 'Disk Diag', id: 672206759
+mas 'Slack', id: 803453959
+mas 'Wunderlist', id: 410628904

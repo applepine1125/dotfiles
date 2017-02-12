@@ -9,7 +9,6 @@ set tabstop=2
 set backspace=2
 set shiftwidth=2
 set laststatus=2
-set cursorline
 set number
 set showmatch
 set ignorecase
@@ -19,8 +18,8 @@ set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 
 
 " dein detup
-let s:dein_dir = $HOME
-let s:dein_repo_dir = s:dein_dir . '/.vim/bundle/repos/github.com/Shougo/dein.vim'
+let s:dein_dir = $HOME . '/.vim/bundle'
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 if &runtimepath !~# '/dein.vim'
   if !isdirectory(s:dein_repo_dir)
@@ -33,8 +32,8 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   " Load and cached toml
   " all plugins listed in toml
-  call dein#load_toml(s:dein_dir . '/.vim/bundle/rc/dein.toml', {'lazy': 0})
-  call dein#load_toml(s:dein_dir . '/.vim/bundle/rc/dein_lazy.toml', {'lazy': 1})
+  call dein#load_toml(s:dein_dir . '/rc/dein.toml', {'lazy': 0})
+  call dein#load_toml(s:dein_dir . '/rc/dein_lazy.toml', {'lazy': 1})
   call dein#end()
   call dein#save_state()
 endif

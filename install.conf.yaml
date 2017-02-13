@@ -10,6 +10,8 @@
     ~/.zprofile: zsh/.zprofile
     ~/.zshenv: zsh/.zshenv
     ~/.zshrc: zsh/.zshrc
+    ~/.gitignore_global: git/.gitignore_global
 
 - shell:
     - [git submodule update --recursive, Installing submodules]
+    - [git config --global core.excludesfile ~/.gitignore_global, Activating .gitignore_global]

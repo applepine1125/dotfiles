@@ -14,7 +14,7 @@ set showmatch
 set ignorecase
 set smartcase
 set list
-set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 
 
 " dein detup

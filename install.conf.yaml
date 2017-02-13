@@ -10,6 +10,8 @@
     ~/.zprofile: zsh/.zprofile
     ~/.zshenv: zsh/.zshenv
     ~/.zshrc: zsh/.zshrc
+    ~/.tmux.conf: tmux/.tmux.conf
+    ~/.tmux: tmux/.tmux
     ~/.gitignore_global: git/.gitignore_global
 
 - shell:

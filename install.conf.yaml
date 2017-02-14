@@ -12,6 +12,7 @@
     ~/.zshrc: zsh/.zshrc
     ~/.tmux.conf: tmux/.tmux.conf
     ~/.tmux: tmux/.tmux
+    ~/.tmux-powerlinerc: tmux/.tmux-powerlinerc
     ~/.gitignore_global: git/.gitignore_global
 
 - shell:

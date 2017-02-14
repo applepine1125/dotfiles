@@ -15,7 +15,7 @@ set ignorecase
 set smartcase
 set list
 set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
-
+let NERDTreeShowHidden=1
 
 " dein detup
 let s:dein_dir = $HOME . '/.vim/bundle'

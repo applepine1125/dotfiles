@@ -1,6 +1,30 @@
 [[plugins]]
+    repo = 'davidhalter/jedi-vim'
+    on_ft = ['python']
+
+[[plugins]]
+    repo = 'kevinw/pyflakes-vim'
+    on_ft = ['python']
+
+[[plugins]]
+    repo = 'hdima/python-syntax'
+    on_ft = ['python']
+
+[[plugins]]
+    repo = 'benmills/vim-golang-alternate'
+    on_ft = ['go']
+
+[[plugins]]
     repo = 'fatih/vim-go'
     on_ft = ['go']
+
+[[plugins]]
+    repo = 'vim-jp/vim-go-extra'
+    on_ft = ['go']
+
+[[plugins]]
+    repo = 'jelera/vim-javascript-syntax'
+    on_ft = ['js']
 
 [[plugins]]
     repo = 'othree/html5.vim'
@@ -9,10 +33,6 @@
 [[plugins]]
     repo = 'hail2u/vim-css3-syntax'
     on_ft = ['css']
-
-[[plugins]]
-    repo = 'jelera/vim-javascript-syntax'
-    on_ft = ['js']
 
 [[plugins]]
     repo = 'tpope/vim-rails'

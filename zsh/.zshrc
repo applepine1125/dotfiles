@@ -46,6 +46,9 @@ alias mv='mv -i'
 alias vi='vim'
 alias cat='cat -n'
 alias less='less -NM'
+# pyenvに乗っ取られたcondaのコマンドパス設定
+alias source='source '
+alias activate=/Users/matsuyuki/.anyenv/envs/pyenv/versions/anaconda3-4.3.0/bin/activate
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
 

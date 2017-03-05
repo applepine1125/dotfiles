@@ -26,3 +26,5 @@ repo = 'Xuyuanp/nerdtree-git-plugin'
 repo = 'Shougo/vimshell'
 rev = '3787e5'
 
+[[plugins]]
+repo = 'airblade/vim-gitgutter'

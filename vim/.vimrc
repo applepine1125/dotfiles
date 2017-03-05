@@ -15,7 +15,10 @@ set ignorecase
 set smartcase
 set list
 set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set updatetime=100 " vim-gitgutterの記号更新タイミング
 let NERDTreeShowHidden=1
+
+exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 
 " dein detup
 let s:dein_dir = $HOME . '/.vim/bundle'

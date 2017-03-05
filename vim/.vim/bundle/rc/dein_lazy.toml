@@ -9,15 +9,7 @@
 
 # Go
 [[plugins]]
-    repo = 'benmills/vim-golang-alternate'
-    on_ft = ['go']
-
-[[plugins]]
     repo = 'fatih/vim-go'
-    on_ft = ['go']
-
-[[plugins]]
-    repo = 'vim-jp/vim-go-extra'
     on_ft = ['go']
 
 # js

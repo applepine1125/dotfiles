@@ -49,6 +49,20 @@ if dein#check_install()
   call dein#install()
 endif
 
+" neocomplete
+let g:acp_enableAtStartup=0
+let g:neocomplete#enable_at_startup=1
+let g:neocomplete#enable_smart_case=1
+let g:neocomplete#sources#syntax#min_keyword_lenth=2
+let gLneocomplete#lock_buffer_name_pattern='\*ku\*'
+if !exists('g:neocomplete#keyword_patterns')
+   let g:neocomplete#keyword_patterns={}
+endif
+let g:neocomplete#keyword_patterns['default']='\h\w*'
+inoremap <expr><C-g> neocomplete#undo_completion()
+inoremap <expr><C-l> neocomplete#complete_common_string()
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
 " autocmd VimEnter * execute 'NERDTree'
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd VimEnter * if argc() ==  0 && !exists("s:std_in") | NERDTree | endif

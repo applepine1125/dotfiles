@@ -1,4 +1,4 @@
-" set params
+"## Set params
 set nobackup
 set noswapfile
 set autoread
@@ -15,12 +15,12 @@ set ignorecase
 set smartcase
 set list
 set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
-set updatetime=100 " vim-gitgutterの記号更新タイミング
+set updatetime=100 " refresh timing of vim-gitgutter
 let NERDTreeShowHidden=1
-
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 
-" dein detup
+
+"## dein detup
 let s:dein_dir = $HOME . '/.vim/bundle'
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
@@ -49,7 +49,8 @@ if dein#check_install()
   call dein#install()
 endif
 
-" neocomplete
+
+"## neocomplete setting
 let g:acp_enableAtStartup=0
 let g:neocomplete#enable_at_startup=1
 let g:neocomplete#enable_smart_case=1
@@ -63,6 +64,8 @@ inoremap <expr><C-g> neocomplete#undo_completion()
 inoremap <expr><C-l> neocomplete#complete_common_string()
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
+
+"## nerdtree setting
 " autocmd VimEnter * execute 'NERDTree'
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd VimEnter * if argc() ==  0 && !exists("s:std_in") | NERDTree | endif

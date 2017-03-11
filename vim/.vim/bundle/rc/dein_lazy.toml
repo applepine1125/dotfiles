@@ -27,26 +27,30 @@
     repo = 'hail2u/vim-css3-syntax'
     on_ft = ['css']
 
-# ruby
+# ruby, rails
 [[plugins]]
     repo = 'tpope/vim-rails'
     on_ft = ['rb']
 
+[[plugins]]
+  repo = 'basyura/unite-rails'
+  on_ft = ['rb']
+
 # toml
 [[plugins]]
-    repo = 'cespare/vim-toml'
-    on_ft = ['toml']
+  repo = 'cespare/vim-toml'
+  on_ft = ['toml']
 
 # markdown
 [[plugins]]
-    repo = 'plasticboy/vim-markdown'
-    on_ft = ['markdown', 'mkd']
+  repo = 'plasticboy/vim-markdown'
+  on_ft = ['markdown', 'md']
 
 [[plugins]]
-    repo = 'kannokanno/previm'
-    on_ft = ['markdown', 'mkd']
+  repo = 'kannokanno/previm'
+  on_ft = ['markdown', 'md']
 
 [[plugins]]
-    repo = 'tyru/open-browser.vim'
-    on_ft = ['markdown', 'mkd']
+  repo = 'tyru/open-browser.vim'
+  on_ft = ['markdown', 'md']
 

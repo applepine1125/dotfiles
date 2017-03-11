@@ -1,4 +1,3 @@
-"## Set params
 set nobackup
 set noswapfile
 set autoread
@@ -20,7 +19,9 @@ let NERDTreeShowHidden=1
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 
 
-"## dein detup
+"--------------------------------------------
+"# dein setup
+"--------------------------------------------
 let s:dein_dir = $HOME . '/.vim/bundle'
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
@@ -41,8 +42,12 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
+" # solarized colorscheme
 filetype plugin indent on
 syntax enable
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 
 " If you want to install not installed plugins on startup.
 if dein#check_install()
@@ -50,7 +55,17 @@ if dein#check_install()
 endif
 
 
-"## neocomplete setting
+"--------------------------------------------
+"# vim-airline settings
+"--------------------------------------------
+let g:airline_powerline_fonts = 1
+set laststatus=2
+let g:airline_theme = 'molokai'
+
+
+"--------------------------------------------
+"# neocomplete settings
+"--------------------------------------------
 let g:acp_enableAtStartup=0
 let g:neocomplete#enable_at_startup=1
 let g:neocomplete#enable_smart_case=1
@@ -65,7 +80,60 @@ inoremap <expr><C-l> neocomplete#complete_common_string()
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 
-"## nerdtree setting
+"--------------------------------------------
+"# neosnippet settings
+"--------------------------------------------
+" Plugin key-mappings.
+"  Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+ imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+ xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+ imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+
+"--------------------------------------------
+"# NERDtree settings
+"--------------------------------------------
 " autocmd VimEnter * execute 'NERDTree'
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd VimEnter * if argc() ==  0 && !exists("s:std_in") | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
+
+
+"--------------------------------------------
+"# syntastic settings
+"--------------------------------------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+"let g:syntastic_mode_map = { 'mode': 'passive',
+"            \ 'active_filetypes': ['ruby','go', 'python'] }
+let g:syntastic_mode_map = { 'mode': 'active'}
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_go_checkers = ['go', 'golint']
+let g:syntastic_ruby_checkers = ['rubocop']
+
+
+"--------------------------------------------
+"# ctrlp settings
+"--------------------------------------------
+" Prefix: s
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_extensions = ['tag', 'quickfix', 'dir', 'line', 'mixed']
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:18'
+
+let g:ackprg = 'ag --nogroup --nocolor --column'

@@ -52,3 +52,5 @@ repo = 'vim-syntastic/syntastic'
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
 
+[[plugins]]
+repo = 'Lokaltog/vim-easymotion'

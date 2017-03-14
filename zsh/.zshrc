@@ -1,6 +1,9 @@
 #vi bind
 #bindkey -v
 
+#nvim設定ファイル設定
+export XDG_CONFIG_HOME=~/.config
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -43,7 +46,8 @@ alias ll='ls -l'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
 alias cat='cat -n'
 alias less='less -NM'
 # pyenvに乗っ取られたcondaのコマンドパス設定

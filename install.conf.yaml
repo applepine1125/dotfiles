@@ -24,3 +24,4 @@
 - shell:
     - [git submodule update --recursive, Installing submodules]
     - [git config --global core.excludesfile ~/.gitignore_global, Activating .gitignore_global]
+    - [curl -sL zplug.sh/installer | zsh, Installing zplug]

@@ -13,3 +13,14 @@ cd ~
 git clone https://github.com/applepine1125/dotfiles
 dotfiles/install
 ```
+
+install ricty font for powerline theme
+```
+$ brew update
+$ brew uninstall ricty
+$ brew tap sanemat/font
+$ brew install --vim-powerline ricty
+$ cp -f /usr/local/Cellar/ricty/3.2.3/share/fonts/Ricty*.ttf ~/Library/Fonts/ 
+$ fc-cache -vf
+$ exec $SHELL -l
+```

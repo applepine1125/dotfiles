@@ -16,6 +16,7 @@ set list
 set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set updatetime=100 " refresh timing of vim-gitgutter
 let NERDTreeShowHidden=1
+let g:vim_markdown_folding_disabled=1
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 
 

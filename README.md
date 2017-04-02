@@ -15,7 +15,7 @@ $ brew update
 $ brew uninstall ricty
 $ brew tap sanemat/font
 $ brew install --vim-powerline ricty
-$ cp -f /usr/local/Cellar/ricty/3.2.3/share/fonts/Ricty*.ttf ~/Library/Fonts/ 
+$ cp -f /usr/local/Cellar/ricty/{your directory version}/share/fonts/Ricty*.ttf ~/Library/Fonts/ 
 $ fc-cache -vf
 $ exec $SHELL -l
 ```

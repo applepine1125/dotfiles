@@ -2,9 +2,11 @@ tap 'caskroom/cask'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/versions'
+tap 'neovim/neovim'
 tap 'sanemat/font'
 cask 'xquartz'
 brew 'autoconf'
+brew 'automake'
 brew 'libpng'
 brew 'freetype'
 brew 'fontconfig'
@@ -17,9 +19,11 @@ brew 'cairo'
 brew 'gmp@4'
 brew 'isl@0.12'
 brew 'cloog'
+brew 'cmake'
 brew 'zeromq'
 brew 'czmq'
 brew 'direnv'
+brew 'emojify'
 brew 'jpeg'
 brew 'libtiff'
 brew 'libtool'
@@ -37,29 +41,41 @@ brew 'little-cms2'
 brew 'ghostscript'
 brew 'graphicsmagick'
 brew 'isl@0.11'
+brew 'jemalloc'
 brew 'oniguruma'
 brew 'jq'
+brew 'openssl'
+brew 'libevent'
 brew 'libsodium'
+brew 'libtermkey'
+brew 'libuv'
+brew 'libvterm'
 brew 'lua'
 brew 'mas'
-brew 'openssl'
 brew 'mongodb'
+brew 'msgpack'
+brew 'readline'
+brew 'sqlite'
+brew 'python'
+brew 'mycli'
 brew 'mysql'
 brew 'nkf'
-brew 'readline'
+brew 'peco'
 brew 'postgresql'
+brew 'reattach-to-user-namespace'
+brew 'redis@2.8'
 brew 'ruby-build'
 brew 'ssh-copy-id'
 brew 'xz'
 brew 'the_silver_searcher'
+brew 'tmux'
 brew 'uncrustify'
+brew 'unibilium'
 brew 'vim', args: ['with-lua']
 brew 'zsh'
 brew 'zsh-completions'
-brew 'homebrew/versions/redis28'
-brew 'sanemat/font/ricty', args: ['vim-powerline', 'with-powerline']
-cask 'adobe-creative-cloud'
-cask 'adobe-creative-cloud-cleaner-tool'
+brew 'neovim/neovim/neovim'
+brew 'sanemat/font/ricty', args: ['with-powerline']
 cask 'appcleaner'
 cask 'arduino'
 cask 'atom'
@@ -74,11 +90,14 @@ cask 'mamp'
 cask 'mp3gain-express'
 cask 'night-owl'
 cask 'skype'
-mas 'Microsoft Remote Desktop', id: 715768417
-mas 'Fusion360', id: 868968810
-mas 'Memory Clean 2', id: 1114591412
-mas 'Xcode', id: 497799835
-mas 'Keynote', id: 409183694
+cask 'tunnelblick'
 mas 'Disk Diag', id: 672206759
+mas 'Fusion360', id: 868968810
+mas 'Keynote', id: 409183694
+mas 'LINE', id: 539883307
+mas 'Memory Clean 2', id: 1114591412
+mas 'Microsoft Remote Desktop', id: 715768417
 mas 'Slack', id: 803453959
-mas 'Wunderlist', id: 410628904
+mas 'The Unarchiver', id: 425424353
+mas 'TweetDeck', id: 485812721
+mas 'Xcode', id: 497799835

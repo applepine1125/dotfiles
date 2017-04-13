@@ -43,18 +43,20 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
-" # solarized colorscheme
-filetype plugin indent on
-syntax enable
-" let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-set background=dark
-colorscheme solarized
-
 " If you want to install not installed plugins on startup.
 if dein#check_install()
   call dein#install()
 endif
+
+"--------------------------------------------
+"#  solarized colorscheme
+"--------------------------------------------
+filetype plugin indent on
+syntax enable
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+set background=dark
+colorscheme solarized
 
 
 "--------------------------------------------

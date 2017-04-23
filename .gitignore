@@ -2,3 +2,5 @@
 vim/.vim/bundle/repos/github.com/
 vim/.vim/bundle/.cache/
 vim/.vim/bundle/cache_vim
+tmux/.tmux/plugins/
+tmux/.tmux/resurrect/

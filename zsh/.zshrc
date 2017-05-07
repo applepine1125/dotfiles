@@ -78,3 +78,4 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export GOBIN=$GOPATH/bin
 export PATH=$GOPATH:$GOBIN:$PATH
+eval $(/usr/libexec/path_helper -s)

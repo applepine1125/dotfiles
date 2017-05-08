@@ -14,7 +14,7 @@ set ignorecase
 set smartcase
 set list
 set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
-set updatetime=100 " refresh timing of vim-gitgutter
+set updatetime=100" refresh timing of vim-gitgutter
 let NERDTreeShowHidden=1
 let g:vim_markdown_folding_disabled=1
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
@@ -48,15 +48,23 @@ if dein#check_install()
   call dein#install()
 endif
 
+" "--------------------------------------------
+" "#  solarized colorscheme
+" "--------------------------------------------
+filetype plugin indent on
+syntax enable
+" let g:solarized_termcolors=256
+" let g:solarized_termtrans=1
+" set background=dark
+" colorscheme solarized
+
+
 "--------------------------------------------
 "#  solarized colorscheme
 "--------------------------------------------
-filetype plugin indent on
-syntax enable
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
+" let g:hybrid_custom_term_colors = 1
 set background=dark
-colorscheme solarized
+colorscheme hybrid
 
 
 "--------------------------------------------

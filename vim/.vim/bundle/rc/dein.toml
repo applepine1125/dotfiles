@@ -16,9 +16,6 @@ repo = 'Shougo/neocomplete'
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 
-# [[plugins]]
-# repo = 'tomasr/molokai'
-
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 
@@ -34,8 +31,11 @@ repo = 'vim-airline/vim-airline'
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 
+# [[plugins]]
+# repo = 'altercation/vim-colors-solarized'
+
 [[plugins]]
-repo = 'altercation/vim-colors-solarized'
+repo = 'w0ng/vim-hybrid'
 
 [[plugins]]
 repo = 'mileszs/ack.vim'

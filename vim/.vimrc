@@ -48,21 +48,13 @@ if dein#check_install()
   call dein#install()
 endif
 
-" "--------------------------------------------
-" "#  solarized colorscheme
-" "--------------------------------------------
-filetype plugin indent on
-syntax enable
-" let g:solarized_termcolors=256
-" let g:solarized_termtrans=1
-" set background=dark
-" colorscheme solarized
-
 
 "--------------------------------------------
-"#  solarized colorscheme
+"# hybrid colorscheme
 "--------------------------------------------
 " let g:hybrid_custom_term_colors = 1
+filetype plugin indent on
+syntax enable
 set background=dark
 colorscheme hybrid
 
@@ -112,12 +104,12 @@ endif
 
 
 "--------------------------------------------
-"# NERDtree settings
+"# NERDtree, NERDTreeTabs settings
 "--------------------------------------------
 " autocmd VimEnter * execute 'NERDTree'
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd VimEnter * if argc() ==  0 && !exists("s:std_in") | NERDTree | endif
-map <C-e> :NERDTreeToggle<CR>
+map <C-e> :NERDTreeTabsToggle<CR>
 
 
 "--------------------------------------------

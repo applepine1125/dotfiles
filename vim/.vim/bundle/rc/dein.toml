@@ -34,9 +34,6 @@ repo = 'vim-airline/vim-airline'
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 
-# [[plugins]]
-# repo = 'altercation/vim-colors-solarized'
-
 [[plugins]]
 repo = 'w0ng/vim-hybrid'
 

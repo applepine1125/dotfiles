@@ -1,103 +1,112 @@
-tap 'caskroom/cask'
-tap 'homebrew/bundle'
-tap 'homebrew/core'
-tap 'homebrew/versions'
-tap 'neovim/neovim'
-tap 'sanemat/font'
-cask 'xquartz'
-brew 'autoconf'
-brew 'automake'
-brew 'libpng'
-brew 'freetype'
-brew 'fontconfig'
-brew 'gettext'
-brew 'libffi'
-brew 'pcre'
-brew 'glib'
-brew 'pixman'
-brew 'cairo'
-brew 'gmp@4'
-brew 'isl@0.12'
-brew 'cloog'
-brew 'cmake'
-brew 'zeromq'
-brew 'czmq'
-brew 'direnv'
-brew 'emojify'
-brew 'jpeg'
-brew 'libtiff'
-brew 'libtool'
-brew 'pkg-config'
-brew 'gobject-introspection'
-brew 'icu4c'
-brew 'harfbuzz'
-brew 'pango'
-brew 'fontforge'
-brew 'mpfr@2'
-brew 'libmpc@0.8'
-brew 'gcc@4.8'
-brew 'gdbm'
-brew 'little-cms2'
-brew 'ghostscript'
-brew 'graphicsmagick'
-brew 'isl@0.11'
-brew 'jemalloc'
-brew 'oniguruma'
-brew 'jq'
-brew 'openssl'
-brew 'libevent'
-brew 'libsodium'
-brew 'libtermkey'
-brew 'libuv'
-brew 'libvterm'
-brew 'lua'
-brew 'mas'
-brew 'mongodb'
-brew 'msgpack'
-brew 'readline'
-brew 'sqlite'
-brew 'python'
-brew 'mycli'
-brew 'mysql'
-brew 'nkf'
-brew 'peco'
-brew 'postgresql'
-brew 'reattach-to-user-namespace'
-brew 'redis@2.8'
-brew 'ruby-build'
-brew 'ssh-copy-id'
-brew 'xz'
-brew 'the_silver_searcher'
-brew 'tmux'
-brew 'uncrustify'
-brew 'unibilium'
-brew 'vim', args: ['with-lua']
-brew 'zsh'
-brew 'zsh-completions'
-brew 'neovim/neovim/neovim'
-brew 'sanemat/font/ricty', args: ['with-powerline']
-cask 'appcleaner'
-cask 'arduino'
-cask 'atom'
-cask 'bettertouchtool'
-cask 'dropbox'
-cask 'flux'
-cask 'google-chrome'
-cask 'google-japanese-ime'
-cask 'licecap'
-cask 'magicavoxel'
-cask 'mamp'
-cask 'mp3gain-express'
-cask 'night-owl'
-cask 'skype'
-cask 'tunnelblick'
-mas 'Disk Diag', id: 672206759
-mas 'Fusion360', id: 868968810
-mas 'Keynote', id: 409183694
-mas 'LINE', id: 539883307
-mas 'Memory Clean 2', id: 1114591412
-mas 'Microsoft Remote Desktop', id: 715768417
-mas 'Slack', id: 803453959
-mas 'The Unarchiver', id: 425424353
-mas 'TweetDeck', id: 485812721
-mas 'Xcode', id: 497799835
+tap "caskroom/cask"
+tap "homebrew/bundle"
+tap "homebrew/core"
+tap "homebrew/versions"
+tap "neovim/neovim"
+tap "sanemat/font"
+cask "xquartz"
+brew "autoconf"
+brew "automake"
+brew "libpng"
+brew "freetype"
+brew "fontconfig"
+brew "gettext"
+brew "libffi"
+brew "pcre"
+brew "glib"
+brew "pixman"
+brew "cairo"
+brew "gmp@4"
+brew "isl@0.12"
+brew "cloog"
+brew "cmake"
+brew "zeromq"
+brew "czmq"
+brew "direnv"
+brew "docker-compose"
+brew "emojify"
+brew "openssl"
+brew "pkg-config"
+brew "gdbm"
+brew "readline"
+brew "sqlite"
+brew "python"
+brew "gobject-introspection"
+brew "icu4c"
+brew "harfbuzz"
+brew "jpeg"
+brew "libtiff"
+brew "libtool"
+brew "pango"
+brew "fontforge"
+brew "mpfr@2"
+brew "libmpc@0.8"
+brew "gcc@4.8"
+brew "gcc@5"
+brew "little-cms2"
+brew "ghostscript"
+brew "go"
+brew "graphicsmagick"
+brew "isl@0.11"
+brew "jemalloc"
+brew "oniguruma"
+brew "jq"
+brew "libevent"
+brew "libsodium"
+brew "libtermkey"
+brew "libuv"
+brew "libvterm"
+brew "llvm"
+brew "lua"
+brew "mas"
+brew "mongodb"
+brew "msgpack"
+brew "mycli"
+brew "mysql"
+brew "nkf"
+brew "peco"
+brew "postgresql"
+brew "reattach-to-user-namespace"
+brew "redis@2.8"
+brew "ruby-build"
+brew "ssh-copy-id"
+brew "xz"
+brew "the_silver_searcher"
+brew "tmux"
+brew "uncrustify"
+brew "unibilium"
+brew "vim", args: ["with-lua"]
+brew "zsh"
+brew "zsh-completions"
+brew "neovim/neovim/neovim"
+brew "sanemat/font/ricty", args: ["with-powerline"]
+cask "appcleaner"
+cask "arduino"
+cask "atom"
+cask "bettertouchtool"
+cask "dropbox"
+cask "flux"
+cask "google-chrome"
+cask "google-japanese-ime"
+cask "java"
+cask "licecap"
+cask "magicavoxel"
+cask "mamp"
+cask "mp3gain-express"
+cask "night-owl"
+cask "skype"
+cask "tunnelblick"
+mas "Disk Diag", id: 672206759
+mas "Fusion360", id: 868968810
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "LINE", id: 539883307
+mas "Memory Clean 2", id: 1114591412
+mas "Microsoft Remote Desktop", id: 715768417
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Slack", id: 803453959
+mas "The Unarchiver", id: 425424353
+mas "TUT Touch Typing", id: 962713362
+mas "TweetDeck", id: 485812721
+mas "Xcode", id: 497799835

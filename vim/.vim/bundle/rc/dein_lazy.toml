@@ -54,3 +54,8 @@
   repo = 'tyru/open-browser.vim'
   on_ft = ['markdown', 'md']
 
+# matlab
+[[plugins]]
+  repo = 'lazywei/vim-matlab'
+  on_ft = ['matlab', 'm']
+

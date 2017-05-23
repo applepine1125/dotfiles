@@ -113,26 +113,35 @@ map <C-e> :NERDTreeTabsToggle<CR>
 
 
 "--------------------------------------------
+"# ale settings
+"--------------------------------------------
+let g:ale_sign_column_always = 1
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
+
+"--------------------------------------------
 "# syntastic settings
 "--------------------------------------------
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-"let g:syntastic_mode_map = { 'mode': 'passive',
-"            \ 'active_filetypes': ['ruby','go', 'python'] }
-let g:syntastic_mode_map = { 'mode': 'active'}
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_error_symbol = '✗'
-let g:syntastic_style_warning_symbol = '⚠'
-let g:syntastic_check_on_wq = 0
-hi SyntasticErrorSign ctermfg=160
-hi SyntasticWarningSign ctermfg=220
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_go_checkers = ['go', 'golint']
-let g:syntastic_ruby_checkers = ['rubocop']
-
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+"
+" " let g:syntastic_mode_map = { 'mode': 'active'}
+" let g:syntastic_error_symbol='✗'
+" let g:syntastic_warning_symbol='⚠'
+" let g:syntastic_style_error_symbol = '✗'
+" let g:syntastic_style_warning_symbol = '⚠'
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" " hi SyntasticErrorSign ctermfg=160
+" " hi SyntasticWarningSign ctermfg=220
+" let g:syntastic_python_checkers = ['pylint']
+" let g:syntastic_go_checkers = ['go', 'golint']
+" let g:syntastic_ruby_checkers = ['rubocop']
+" let g:syntastic_javascript_checkers = ['jslint']
 
 "--------------------------------------------
 "# ctrlp settings

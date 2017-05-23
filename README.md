@@ -7,7 +7,8 @@ clone this repository and install dotfiles.
 ```
 cd ~
 git clone https://github.com/applepine1125/dotfiles
-dotfiles/install
+cd ~/dotfiles
+./install
 ```
 ### terminal theme  
 Open terminal settings, click `Import`, and select file Solarized_fixed.terminal in `~/dotfiles`

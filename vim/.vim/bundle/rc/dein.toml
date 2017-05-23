@@ -50,7 +50,10 @@ repo = 'ctrlpvim/ctrlp.vim'
 repo = 'tpope/vim-endwise'
 
 [[plugins]]
-repo = 'vim-syntastic/syntastic'
+repo = 'w0rp/ale'
+
+# [[plugins]]
+# repo = 'vim-syntastic/syntastic'
 
 [[plugins]]
 repo = 'tomtom/tcomment_vim'

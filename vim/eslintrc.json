@@ -2,8 +2,14 @@
   "extends": ["eslint:recommended"],
   "plugins": [],
   "parserOptions": {},
-  "env": {"browser": true},
-  "globals": {},
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "globals": {
+    "d3": true,
+    "mdc": true
+  },
   "rules": {
     "semi": "error"
   }

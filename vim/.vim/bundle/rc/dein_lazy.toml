@@ -59,3 +59,8 @@
   repo = 'lazywei/vim-matlab'
   on_ft = ['matlab', 'm']
 
+#tex
+[[plugins]]
+  repo = 'lervag/vimtex'
+  on_ft = ['tex']
+

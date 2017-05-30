@@ -36,6 +36,11 @@
   repo = 'basyura/unite-rails'
   on_ft = ['rb']
 
+#json
+[[plugins]]
+  repo = 'elzr/vim-json'
+  on_ft = ['json']
+
 # toml
 [[plugins]]
   repo = 'cespare/vim-toml'
@@ -63,4 +68,3 @@
 [[plugins]]
   repo = 'lervag/vimtex'
   on_ft = ['tex']
-

@@ -21,6 +21,13 @@ exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 let g:latex_latexmk_options = '-pdfdvi -pvc -gg'
 let g:vimtex_compiler_latexmk = {'callback' : 0}
 
+"# grep settings
+autocmd QuickFixCmdPost *grep* cwindow
+if executable('jvgrep')
+    set grepprg=jvgrep
+  endif
+endif
+
 "--------------------------------------------
 "# dein setup
 "--------------------------------------------

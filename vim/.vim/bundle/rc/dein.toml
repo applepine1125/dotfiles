@@ -37,8 +37,8 @@ repo = 'vim-airline/vim-airline-themes'
 [[plugins]]
 repo = 'w0ng/vim-hybrid'
 
-[[plugins]]
-repo = 'mileszs/ack.vim'
+# [[plugins]]
+# repo = 'mileszs/ack.vim'
 
 [[plugins]]
 repo = 'mattn/sonictemplate-vim'

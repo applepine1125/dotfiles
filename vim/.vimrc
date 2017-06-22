@@ -24,8 +24,7 @@ let g:vimtex_compiler_latexmk = {'callback' : 0}
 "# grep settings
 autocmd QuickFixCmdPost *grep* cwindow
 if executable('jvgrep')
-    set grepprg=jvgrep
-  endif
+  set grepprg=jvgrep
 endif
 
 "--------------------------------------------
@@ -83,13 +82,25 @@ let g:neocomplete#enable_at_startup=1
 let g:neocomplete#enable_smart_case=1
 let g:neocomplete#sources#syntax#min_keyword_lenth=2
 let gLneocomplete#lock_buffer_name_pattern='\*ku\*'
+autocmd FileType python setlocal completeopt-=preview
 if !exists('g:neocomplete#keyword_patterns')
-   let g:neocomplete#keyword_patterns={}
+  let g:neocomplete#keyword_patterns={}
 endif
 let g:neocomplete#keyword_patterns['default']='\h\w*'
 inoremap <expr><C-g> neocomplete#undo_completion()
 inoremap <expr><C-l> neocomplete#complete_common_string()
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+"jedi-vim
+autocmd FileType python setlocal omnifunc=jedi#completions
+let g:jedi#completions_enabled = 0
+let g:jedi#auto_vim_configuration = 0
+
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+
+let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
 
 
 "--------------------------------------------
@@ -97,13 +108,13 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 "--------------------------------------------
 " Plugin key-mappings.
 "  Note: It must be "imap" and "smap".  It uses <Plug> mappings.
- imap <C-k>     <Plug>(neosnippet_expand_or_jump)
- smap <C-k>     <Plug>(neosnippet_expand_or_jump)
- xmap <C-k>     <Plug>(neosnippet_expand_target)
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
 
- imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+      \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For conceal markers.
 if has('conceal')
@@ -125,20 +136,20 @@ map <C-e> :NERDTreeTabsToggle<CR>
 "--------------------------------------------
 let g:ale_sign_column_always = 1
 let g:ale_linters = {
-\   'javascript': ['eslint'],
-\}
+      \   'javascript': ['eslint'],
+      \}
 
 let g:lightline = {
-  \'active': {
-  \  'left': [
-  \    ['mode', 'paste'],
-  \    ['readonly', 'filename', 'modified', 'ale'],
-  \  ]
-  \},
-  \'component_function': {
-  \  'ale': 'ALEGetStatusLine'
-  \}
-\ }
+      \'active': {
+      \  'left': [
+      \    ['mode', 'paste'],
+      \    ['readonly', 'filename', 'modified', 'ale'],
+      \  ]
+      \},
+      \'component_function': {
+      \  'ale': 'ALEGetStatusLine'
+      \}
+      \ }
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
@@ -153,12 +164,6 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_extensions = ['tag', 'quickfix', 'dir', 'line', 'mixed']
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:18'
-
-
-"--------------------------------------------
-"# ack settings
-"--------------------------------------------
-let g:ackprg = 'ag --nogroup --nocolor --column'
 
 
 "--------------------------------------------

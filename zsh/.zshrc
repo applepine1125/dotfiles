@@ -31,8 +31,8 @@ alias vi='vim'
 alias cat='cat -n'
 alias less='less -NM'
 # command path setting of conda
-alias source='source '
-alias activate=/Users/matsuyuki/.anyenv/envs/pyenv/versions/anaconda3-4.3.0/bin/activate
+# alias source='source '
+# alias activate=/Users/matsuyuki/.anyenv/envs/pyenv/versions/anaconda3-4.3.0/bin/activate
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
 #cask
@@ -46,32 +46,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 #--------------------
-#zplug
-#--------------------
- zplug "b4b4r07/emoji-cli"
-
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-zplug load --verbose
-
-#--------------------
-#anyenv
-#--------------------
-if [ -d ${HOME}/.anyenv ] ; then
-  export PATH="$HOME/.anyenv/bin:$PATH"
-  eval "$(anyenv init -)"
-  for D in `ls $HOME/.anyenv/envs`
-  do
-    export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
-  done
-fi
-
-#--------------------
 #golang
 #--------------------
 export GOPATH=$HOME/go
@@ -79,3 +53,29 @@ export PATH=$PATH:/usr/local/go/bin
 export GOBIN=$GOPATH/bin
 export PATH=$GOPATH:$GOBIN:$PATH
 eval $(/usr/libexec/path_helper -s)
+
+#--------------------
+#anyenv
+#--------------------
+if [ -d ${HOME}/.anyenv ] ; then
+  export PATH="$HOME/.anyenv/bin:$PATH"
+  eval "$(anyenv init -)"
+  for D in `find $HOME/.anyenv/envs -type d -d 1`
+    do
+      export PATH="$D/shims:$PATH"
+    done
+fi
+
+#--------------------
+#zplug
+#--------------------
+zplug "b4b4r07/emoji-cli"
+
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
+
+zplug load --verbose

@@ -16,7 +16,11 @@ set list
 set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set updatetime=100" refresh timing of vim-gitgutter
 let NERDTreeShowHidden=1
+
 let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_conceal = 0
+let g:previm_show_header = 0
+
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 let g:latex_latexmk_options = '-pdfdvi -pvc -gg'
 let g:vimtex_compiler_latexmk = {'callback' : 0}

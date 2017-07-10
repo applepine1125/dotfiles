@@ -15,21 +15,13 @@ set smartcase
 set list
 set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set updatetime=100" refresh timing of vim-gitgutter
-let NERDTreeShowHidden=1
-
-let g:vim_markdown_folding_disabled=1
-let g:vim_markdown_conceal = 0
-let g:previm_show_header = 0
-
-exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
-let g:latex_latexmk_options = '-pdfdvi -pvc -gg'
-let g:vimtex_compiler_latexmk = {'callback' : 0}
 
 "# grep settings
 autocmd QuickFixCmdPost *grep* cwindow
 if executable('jvgrep')
   set grepprg=jvgrep
 endif
+
 
 "--------------------------------------------
 "# dein setup
@@ -85,8 +77,8 @@ let g:acp_enableAtStartup=0
 let g:neocomplete#enable_at_startup=1
 let g:neocomplete#enable_smart_case=1
 let g:neocomplete#sources#syntax#min_keyword_lenth=2
-let gLneocomplete#lock_buffer_name_pattern='\*ku\*'
-autocmd FileType python setlocal completeopt-=preview
+let g:neocomplete#lock_buffer_name_pattern='\*ku\*'
+
 if !exists('g:neocomplete#keyword_patterns')
   let g:neocomplete#keyword_patterns={}
 endif
@@ -95,16 +87,50 @@ inoremap <expr><C-g> neocomplete#undo_completion()
 inoremap <expr><C-l> neocomplete#complete_common_string()
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
-"jedi-vim
-autocmd FileType python setlocal omnifunc=jedi#completions
-let g:jedi#completions_enabled = 0
-let g:jedi#auto_vim_configuration = 0
-
 if !exists('g:neocomplete#force_omni_input_patterns')
   let g:neocomplete#force_omni_input_patterns = {}
 endif
 
 let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+let g:neocomplete#sources#omni#input_patterns.python = '' 
+
+"--------------------------------------------
+"# jedi-vim settings
+"--------------------------------------------
+autocmd FileType python setlocal omnifunc=jedi#completions
+autocmd FileType python setlocal completeopt-=preview
+let g:jedi#completions_enabled = 0
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#popup_select_first = 0
+let g:jedi#popup_on_dot = 0
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#goto_assignments_command = "<C-g>"
+let g:jedi#goto_definitions_command = "<C-d>"
+let g:jedi#documentation_command = "<C-k>"
+
+
+"--------------------------------------------
+"# vim-go settings
+"--------------------------------------------
+exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
+
+
+"--------------------------------------------
+"# vimtex settings
+"--------------------------------------------
+let g:latex_latexmk_options = '-pdfdvi -pvc -gg'
+let g:vimtex_compiler_latexmk = {'callback' : 0}
+
+
+"--------------------------------------------
+"# vim-markdown settings
+"--------------------------------------------
+let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_conceal = 0
+let g:previm_show_header = 0
 
 
 "--------------------------------------------
@@ -131,6 +157,7 @@ endif
 "--------------------------------------------
 " autocmd VimEnter * execute 'NERDTree'
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeShowHidden=1
 autocmd VimEnter * if argc() ==  0 && !exists("s:std_in") | NERDTree | endif
 map <C-e> :NERDTreeTabsToggle<CR>
 

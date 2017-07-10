@@ -16,6 +16,11 @@ set list
 set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set updatetime=100" refresh timing of vim-gitgutter
 
+" reset augroup
+augroup MyAutoCmd
+autocmd!
+augroup END
+
 "# grep settings
 autocmd QuickFixCmdPost *grep* cwindow
 if executable('jvgrep')
@@ -55,11 +60,10 @@ endif
 "--------------------------------------------
 "# hybrid colorscheme
 "--------------------------------------------
-" let g:hybrid_custom_term_colors = 1
+set background=dark
 filetype plugin indent on
 syntax enable
-set background=dark
-colorscheme hybrid
+au MyAutoCmd VimEnter * nested colorscheme hybrid 
 
 
 "--------------------------------------------
@@ -92,10 +96,6 @@ if !exists('g:neocomplete#force_omni_input_patterns')
 endif
 
 let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
-if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
-endif
-let g:neocomplete#sources#omni#input_patterns.python = '' 
 
 "--------------------------------------------
 "# jedi-vim settings

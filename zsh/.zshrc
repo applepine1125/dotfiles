@@ -10,6 +10,9 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt share_history
 
+# for neovim 
+export XDG_CONFIG_HOME=$HOME/.config
+
 if [ -e /usr/local/share/zsh-completions ]; then
   fpath=(/usr/local/share/zsh-completions $fpath)
 fi

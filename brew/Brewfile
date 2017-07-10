@@ -98,13 +98,10 @@ cask "skype"
 cask "tunnelblick"
 mas "Disk Diag", id: 672206759
 mas "Fusion360", id: 868968810
-mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "Memory Clean 2", id: 1114591412
 mas "Microsoft Remote Desktop", id: 715768417
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "Slack", id: 803453959
 mas "The Unarchiver", id: 425424353
 mas "TUT Touch Typing", id: 962713362

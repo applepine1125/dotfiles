@@ -1,0 +1,34 @@
+# dein plugins for neovim
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = 'let g:deoplete#enable_at_startup = 1'
+
+[[plugins]]
+repo = 'tweekmonster/deoplete-clang2'
+on_ft = ['c', 'cpp']
+hook_source = '''
+  autocmd FileType c,cpp let b:clang2_orig_maps = {}
+'''
+
+[[plugins]]
+repo = 'zchee/deoplete-jedi'
+on_ft = ['python']
+
+[[plugins]]
+repo = 'zchee/deoplete-go'
+on_ft = ['go']
+
+[[plugin]]
+repo = 'carlitux/deoplete-ternjs'
+on_ft = ['js','jsx','vue']
+build = 'npm install -g tern'
+hook_add = '''
+let g:tern_request_timeout = 1
+let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
+let g:tern#filetypes = [
+                \ 'jsx',
+                \ 'javascript.jsx',
+                \ 'vue',
+                \ 'js',
+                \ ]
+'''

@@ -1,6 +1,7 @@
 # python
 [[plugins]]
 repo = 'davidhalter/jedi-vim'
+if = 'has("lua")'
 on_ft = ['python']
 
 [[plugins]]

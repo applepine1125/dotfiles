@@ -17,6 +17,7 @@ on_ft = ['python']
 [[plugins]]
 repo = 'zchee/deoplete-go'
 on_ft = ['go']
+build = 'make'
 
 [[plugin]]
 repo = 'carlitux/deoplete-ternjs'

@@ -1,22 +1,26 @@
 [[plugins]]
-repo = 'tpope/vim-obsession'
-
-[[plugins]]
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'tpope/vim-obsession'
+
+[[plugins]]
 repo = 'Shougo/neosnippet.vim'
+depends = ['neosnippet-snippets', 'context_filetype.vim']
+on_event = 'InsertCharPre'
+on_ft = 'snippet'
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
-repo = 'Shougo/neocomplete'
-if = 'has("lua")'
+repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-if = 'has("neovim")'
+repo = 'Shougo/neocomplete'
+if = "has('lua')"
+depends = 'context_filetype.vim'
+on_event = 'InsertEnter'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'

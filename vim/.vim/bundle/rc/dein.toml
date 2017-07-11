@@ -12,6 +12,11 @@ repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'Shougo/neocomplete'
+if = 'has("lua")'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+if = 'has("neovim")'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'

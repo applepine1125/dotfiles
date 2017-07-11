@@ -17,9 +17,9 @@ set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set updatetime=100" refresh timing of vim-gitgutter
 
 " reset augroup
-augroup MyAutoCmd
-autocmd!
-augroup END
+"augroup MyAutoCmd
+"autocmd!
+"augroup END
 
 "# grep settings
 autocmd QuickFixCmdPost *grep* cwindow
@@ -63,8 +63,8 @@ endif
 set background=dark
 filetype plugin indent on
 syntax enable
-au MyAutoCmd VimEnter * nested colorscheme hybrid 
-
+"au MyAutoCmd VimEnter * nested colorscheme hybrid 
+colorscheme hybrid
 
 "--------------------------------------------
 "# vim-airline settings
@@ -150,7 +150,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
-
 
 "--------------------------------------------
 "# NERDtree, NERDTreeTabs settings

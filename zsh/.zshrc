@@ -10,7 +10,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt share_history
 
-# for neovim 
+#for neovim 
 export XDG_CONFIG_HOME=$HOME/.config
 
 if [ -e /usr/local/share/zsh-completions ]; then
@@ -21,24 +21,26 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 setopt list_packed
 setopt correct
 setopt no_beep
+
 # show branch in tmux
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
 # alias
 alias ls='ls -aF'
 alias ll='ls -l'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias vi='vim'
-#alias vim='vim'
 alias cat='cat -n'
 alias less='less -NM'
+alias matlab='matlab -nodesktop -nosplash'
 # command path setting of conda
 # alias source='source '
 # alias activate=/Users/matsuyuki/.anyenv/envs/pyenv/versions/anaconda3-4.3.0/bin/activate
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
-#cask
+
+#cask settings
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 #--------------------

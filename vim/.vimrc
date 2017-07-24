@@ -120,7 +120,7 @@ let g:jedi#documentation_command = "<C-k>"
 "# vim-go settings
 "--------------------------------------------
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
-
+let g:go_fmt_command = "goimports"
 
 "--------------------------------------------
 "# vimtex settings

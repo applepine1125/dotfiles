@@ -38,6 +38,9 @@ repo = 'Xuyuanp/nerdtree-git-plugin'
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
+repo = 'simeji/winresizer'
+
+[[plugins]]
 repo = 'vim-airline/vim-airline'
 
 [[plugins]]
@@ -57,6 +60,9 @@ repo = 'tpope/vim-endwise'
 
 [[plugins]]
 repo = 'w0rp/ale'
+
+[[plugins]]
+repo='junegunn/vim-easy-align'
 
 [[plugins]]
 repo = 'tomtom/tcomment_vim'

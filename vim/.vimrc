@@ -155,6 +155,7 @@ if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
 
+
 "--------------------------------------------
 "# NERDtree, NERDTreeTabs settings
 "--------------------------------------------
@@ -162,7 +163,7 @@ endif
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeShowHidden=1
 autocmd VimEnter * if argc() ==  0 && !exists("s:std_in") | NERDTree | endif
-map <C-e> :NERDTreeTabsToggle<CR>
+map <C-n> :NERDTreeTabsToggle<CR>
 
 
 "--------------------------------------------
@@ -218,3 +219,9 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+
+"--------------------------------------------
+"# easyAlign settings
+"--------------------------------------------
+nmap ga <Plug>(EasyAlign)

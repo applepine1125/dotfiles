@@ -7,3 +7,4 @@ let g:dein#_base_path = '/Users/matsuyuki/.vim/bundle'
 let g:dein#_runtime_path = '/Users/matsuyuki/.vim/bundle/.cache/.vimrc/.dein'
 let g:dein#_cache_path = '/Users/matsuyuki/.vim/bundle/.cache/.vimrc'
 let &runtimepath = '/Users/matsuyuki/.vim/bundle/repos/github.com/Shougo/dein.vim/,/Users/matsuyuki/.vim,/Users/matsuyuki/.vim/bundle/repos/github.com/Shougo/dein.vim,/Users/matsuyuki/.vim/bundle/repos/github.com/Shougo/neocomplete,/Users/matsuyuki/.vim/bundle/.cache/.vimrc/.dein,/usr/local/share/vim/vimfiles,/usr/local/share/vim/vim80,/Users/matsuyuki/.vim/bundle/.cache/.vimrc/.dein/after,/usr/local/share/vim/vimfiles/after,/Users/matsuyuki/.vim/after'
+let g:vim_json_syntax_conceal = 0

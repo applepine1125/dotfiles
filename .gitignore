@@ -5,3 +5,4 @@ vim/.vim/bundle/cache_vim
 tmux/.tmux/resurrect/
 vim/.vim/bundle/cache_nvim
 vim/.vim/bundle/state_nvim.vim
+vim/.vim/bundle/state_vim.vim

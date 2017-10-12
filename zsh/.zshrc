@@ -1,5 +1,5 @@
 autoload -Uz compinit
-compinit -u
+compinit -C
 
 source ~/.zplug/init.zsh
 
@@ -84,3 +84,7 @@ if ! zplug check --verbose; then
 fi
 
 zplug load --verbose
+
+# if (which zprof > /dev/null 2>&1) ;then
+#   zprof
+# fi

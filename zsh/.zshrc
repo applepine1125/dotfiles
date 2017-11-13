@@ -88,3 +88,9 @@ zplug load --verbose
 # if (which zprof > /dev/null 2>&1) ;then
 #   zprof
 # fi
+#
+#--------------------
+#tex
+#--------------------
+
+export BIBINPUTS=$BIBINPUTS:~/Dropbox/file/ACLab/ref-mendeley

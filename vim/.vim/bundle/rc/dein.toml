@@ -69,3 +69,7 @@ repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
 repo = 'Lokaltog/vim-easymotion'
+
+[[plugins]]
+repo = 'vim-scripts/dbext.vim'
+

@@ -19,8 +19,16 @@ on_ft = ['go']
 
 # js
 [[plugins]]
-repo = 'jelera/vim-javascript-syntax'
-on_ft = ['js']
+repo = 'othree/yajs.vim'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'maxmellon/vim-jsx-pretty'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'othree/javascript-libraries-syntax.vim'
+on_ft = ['javascript']
 
 # html
 [[plugins]]

@@ -4,7 +4,10 @@
   "parserOptions": {},
   "env": {
     "browser": true,
-    "jquery": true
+    "jquery": true,
+    "es6": true,
+    "commonjs": true,
+    "node": true
   },
   "globals": {
     "d3": true,

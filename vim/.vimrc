@@ -213,7 +213,13 @@ map <C-n> :NERDTreeTabsToggle<CR>
 "# ale settings
 "--------------------------------------------
 let g:ale_sign_column_always = 1
+let g:ale_fix_on_save = 1
+let g:ale_javascript_eslint_use_global  = 1
 let g:ale_linters = {
+      \   'javascript': ['eslint'],
+      \}
+
+let g:ale_fixers = {
       \   'javascript': ['eslint'],
       \}
 
@@ -228,6 +234,7 @@ let g:lightline = {
       \  'ale': 'ALEGetStatusLine'
       \}
       \ }
+
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'

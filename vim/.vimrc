@@ -121,6 +121,7 @@ let g:jedi#documentation_command = "<C-k>"
 "--------------------------------------------
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 let g:go_fmt_command = "goimports"
+nmap gs <Plug>(go-def-split)
 
 "--------------------------------------------
 "# vimtex settings

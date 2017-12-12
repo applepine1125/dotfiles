@@ -126,6 +126,7 @@ nmap gs <Plug>(go-def-split)
 "--------------------------------------------
 "# vimtex settings
 "--------------------------------------------
+au BufRead,BufNewFile *.tex set filetype=tex
 let g:vimtex_compiler_latexmk = {
       \ 'background': 1,
       \ 'build_dir': '',
@@ -139,7 +140,7 @@ let g:vimtex_compiler_latexmk = {
       \    '-interaction=nonstopmode',
       \],
       \}
-
+let g:vimtex_compiler_progname ='nvr'
 let g:vimtex_view_general_viewer
       \ = '/Applications/Skim.app/Contents/SharedSupport/displayline'
 let g:vimtex_view_general_options = '-r @line @pdf @tex'

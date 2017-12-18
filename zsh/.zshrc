@@ -94,3 +94,23 @@ zplug load --verbose
 #--------------------
 
 export BIBINPUTS=$BIBINPUTS:~/Dropbox/file/ACLab/ref-mendeley
+
+#--------------------------------------------
+# peco settings
+#--------------------------------------------
+setopt hist_ignore_all_dups
+
+function peco_select_history() {
+  local tac
+  if which tac > /dev/null; then
+    tac="tac"
+  else
+    tac="tail -r"
+  fi
+  BUFFER=$(fc -l -n 1 | eval $tac | peco --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle clear-screen
+}
+zle -N peco_select_history
+bindkey '^r' peco_select_history
+

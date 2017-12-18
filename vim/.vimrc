@@ -127,6 +127,7 @@ nmap gs <Plug>(go-def-split)
 "# vimtex settings
 "--------------------------------------------
 au BufRead,BufNewFile *.tex set filetype=tex
+let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_compiler_latexmk = {
       \ 'background': 1,
       \ 'build_dir': '',

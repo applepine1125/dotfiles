@@ -27,6 +27,8 @@ if executable('jvgrep')
   set grepprg=jvgrep
 endif
 
+"change line number color
+autocmd ColorScheme * highlight LineNr ctermfg=245
 
 "--------------------------------------------
 "# dein setup

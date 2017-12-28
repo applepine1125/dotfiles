@@ -33,7 +33,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias cat='cat -n'
 alias less='less -NM'
-alias matlab='matlab -nodesktop -nosplash'
+alias matlab='/Applications/MATLAB_R2017b.app/bin/matlab -nodesktop -nosplash'
 # command path setting of conda
 # alias source='source '
 # alias activate=/Users/matsuyuki/.anyenv/envs/pyenv/versions/anaconda3-4.3.0/bin/activate

@@ -57,6 +57,9 @@ hook_add = '''
 let g:vim_json_syntax_conceal = 0
 '''
 
+repo = 'rhysd/vim-fixjson'
+on_ft = ['json']
+
 # toml
 [[plugins]]
 repo = 'cespare/vim-toml'

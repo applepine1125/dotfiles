@@ -4,6 +4,7 @@ compinit -C
 source ~/.zplug/init.zsh
 
 export LANG=ja_JP.UTF-8
+export NODE_ID=test
 # history setting
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

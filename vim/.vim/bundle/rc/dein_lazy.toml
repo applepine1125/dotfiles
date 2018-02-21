@@ -30,6 +30,10 @@ on_ft = ['javascript']
 repo = 'othree/javascript-libraries-syntax.vim'
 on_ft = ['javascript']
 
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = ['vue']
+
 # html
 [[plugins]]
 repo = 'othree/html5.vim'

@@ -30,6 +30,9 @@ endif
 "change line number color
 autocmd ColorScheme * highlight LineNr ctermfg=245
 
+"# vim-vue setting
+autocmd FileType vue syntax sync fromstart
+
 "--------------------------------------------
 "# dein setup
 "--------------------------------------------

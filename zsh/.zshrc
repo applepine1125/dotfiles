@@ -4,7 +4,6 @@ compinit -C
 source ~/.zplug/init.zsh
 
 export LANG=ja_JP.UTF-8
-export NODE_ID=test
 # history setting
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -34,7 +33,6 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias cat='cat -n'
 alias less='less -NM'
-alias matlab='/Applications/MATLAB_R2017b.app/bin/matlab -nodesktop -nosplash'
 # command path setting of conda
 # alias source='source '
 # alias activate=/Users/matsuyuki/.anyenv/envs/pyenv/versions/anaconda3-4.3.0/bin/activate

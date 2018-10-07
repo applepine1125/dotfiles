@@ -113,3 +113,9 @@ function peco_select_history() {
 zle -N peco_select_history
 bindkey '^r' peco_select_history
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/matsuyuki/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/matsuyuki/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/matsuyuki/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/matsuyuki/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

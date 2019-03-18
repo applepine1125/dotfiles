@@ -11,10 +11,10 @@ SAVEHIST=10000
 setopt share_history
 
 #for neovim 
-export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CONFIG_HOME=$HOME/.vim
 
-if [ -e /usr/local/share/zsh-completions ]; then
-  fpath=(/usr/local/share/zsh-completions $fpath)
+if [ -e /usr/local/share/zsh/functions ]; then
+  fpath=(/usr/local/share/zsh/functions $fpath)
 fi
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -115,7 +115,7 @@ bindkey '^r' peco_select_history
 
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/matsuyuki/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/matsuyuki/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/matsuyuki/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/matsuyuki/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/matsuyuki/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/matsuyuki/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/matsuyuki/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/matsuyuki/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

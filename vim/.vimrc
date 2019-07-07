@@ -16,11 +16,6 @@ set list
 set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set updatetime=100" refresh timing of vim-gitgutter
 
-" reset augroup
-"augroup MyAutoCmd
-"autocmd!
-"augroup END
-
 "# grep settings
 autocmd QuickFixCmdPost *grep* cwindow
 if executable('jvgrep')
@@ -29,9 +24,6 @@ endif
 
 "change line number color
 autocmd ColorScheme * highlight LineNr ctermfg=245
-
-"# vim-vue setting
-autocmd FileType vue syntax sync fromstart
 
 "--------------------------------------------
 "# dein setup
@@ -283,3 +275,9 @@ nmap <Leader>w <Plug>(easymotion-overwin-w)
 "# easyAlign settings
 "--------------------------------------------
 nmap ga <Plug>(EasyAlign)
+
+"--------------------------------------------
+"# vim-vue setting
+"--------------------------------------------
+autocmd FileType vue syntax sync fromstart
+

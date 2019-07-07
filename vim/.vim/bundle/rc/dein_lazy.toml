@@ -91,3 +91,13 @@ on_ft = ['matlab', 'm']
 [[plugins]]
 repo = 'lervag/vimtex'
 on_ft = ['tex']
+
+#Dockerfile
+[[plugins]]
+repo = 'ekalinin/Dockerfile.vim'
+on_ft = ['Dockerfile']
+
+#PlantUML
+[[plugins]]
+repo = 'aklt/plantuml-syntax'
+on_ft = ['pu','uml']

@@ -1,5 +1,6 @@
 autoload -Uz compinit
 compinit -C
+export MESSAGING_USER=matsuyuki
 
 source ~/.zplug/init.zsh
 
@@ -34,8 +35,8 @@ alias mv='mv -i'
 alias cat='cat -n'
 alias less='less -NM'
 # command path setting of conda
-# alias source='source '
-# alias activate=/Users/matsuyuki/.anyenv/envs/pyenv/versions/anaconda3-4.3.0/bin/activate
+alias source='source '
+alias activate=/Users/matsuyuki/.anyenv/envs/pyenv/versions/anaconda3-4.3.0/bin/activate
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
 
@@ -56,8 +57,13 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export GOBIN=$GOPATH/bin
 export PATH=$GOPATH:$GOBIN:$PATH
+export GO111MODULE=on
 eval $(/usr/libexec/path_helper -s)
 
+#--------------------
+#aws
+#--------------------
+export AWS_PROFILE=development
 #--------------------
 #anyenv
 #--------------------
@@ -119,3 +125,6 @@ if [ -f '/Users/matsuyuki/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/U
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/matsuyuki/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/matsuyuki/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /Users/matsuyuki/go/bin/msg msg

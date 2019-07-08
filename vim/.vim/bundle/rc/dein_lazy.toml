@@ -91,3 +91,12 @@ on_ft = ['matlab', 'm']
 [[plugins]]
 repo = 'lervag/vimtex'
 on_ft = ['tex']
+
+#uml
+[[plugins]]
+repo = 'scrooloose/vim-slumlord'
+on_ft = ['uml']
+
+[[plugins]]
+repo = 'aklt/plantuml-syntax'
+on_ft = ['uml']

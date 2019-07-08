@@ -15,6 +15,7 @@ set smartcase
 set list
 set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set updatetime=100" refresh timing of vim-gitgutter
+au BufRead,BufNewFile *.uml set filetype=uml
 
 " reset augroup
 "augroup MyAutoCmd

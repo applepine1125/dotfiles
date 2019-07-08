@@ -36,9 +36,7 @@ alias cat='cat -n'
 alias less='less -NM'
 alias lzd='lazydocker'
 alias source='source '
-alias activate=/Users/matsuyuki/.anyenv/envs/pyenv/versions/anaconda3-4.3.0/bin/activate
-
-
+alias activate=/Users/matsuyuki/.anyenv/envs/pyenv/versions/anaconda3-5.3.0/bin/activate
 
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
@@ -68,6 +66,7 @@ eval $(/usr/libexec/path_helper -s)
 #aws
 #--------------------
 export AWS_PROFILE=development
+
 #--------------------
 #anyenv
 #--------------------

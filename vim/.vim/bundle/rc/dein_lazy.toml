@@ -99,4 +99,11 @@ on_ft = ['uml']
 
 [[plugins]]
 repo = 'aklt/plantuml-syntax'
-on_ft = ['uml']
+on_ft = ['pu','uml']
+
+#Dockerfile
+[[plugins]]
+repo = 'ekalinin/Dockerfile.vim'
+on_ft = ['Dockerfile']
+
+

@@ -34,9 +34,12 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias cat='cat -n'
 alias less='less -NM'
-# command path setting of conda
+alias lzd='lazydocker'
 alias source='source '
 alias activate=/Users/matsuyuki/.anyenv/envs/pyenv/versions/anaconda3-4.3.0/bin/activate
+
+
+
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
 
@@ -53,6 +56,7 @@ fi
 #--------------------
 #golang
 #--------------------
+export GO111MODULE=on
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export GOBIN=$GOPATH/bin
@@ -87,18 +91,7 @@ if ! zplug check --verbose; then
     echo; zplug install
   fi
 fi
-
 zplug load --verbose
-
-# if (which zprof > /dev/null 2>&1) ;then
-#   zprof
-# fi
-#
-#--------------------
-#tex
-#--------------------
-
-export BIBINPUTS=$BIBINPUTS:~/Dropbox/file/ACLab/ref-mendeley
 
 #--------------------------------------------
 # peco settings
@@ -119,11 +112,10 @@ function peco_select_history() {
 zle -N peco_select_history
 bindkey '^r' peco_select_history
 
-
-# The next line updates PATH for the Google Cloud SDK.
+#--------------------------------------------
+# gcloud settings
+#--------------------------------------------
 if [ -f '/Users/matsuyuki/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/matsuyuki/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
 if [ -f '/Users/matsuyuki/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/matsuyuki/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 autoload -U +X bashcompinit && bashcompinit

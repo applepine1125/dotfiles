@@ -6,6 +6,7 @@ tap "jesseduffield/lazydocker"
 tap "mas-cli/tap"
 tap "neovim/neovim"
 tap "sanemat/font"
+brew "anyenv"
 brew "autoconf"
 brew "automake"
 brew "fontconfig"
@@ -51,6 +52,7 @@ brew "libuv"
 brew "libvterm"
 brew "llvm"
 brew "lua"
+brew "mas"
 brew "mercurial"
 brew "mongodb"
 brew "msgpack"
@@ -62,7 +64,6 @@ brew "nodebrew"
 brew "open-ocd"
 brew "peco"
 brew "pkg-config"
-brew "plantuml"
 brew "portaudio"
 brew "postgresql"
 brew "reattach-to-user-namespace"
@@ -76,23 +77,28 @@ brew "tmux-mem-cpu-load"
 brew "uncrustify"
 brew "vim"
 brew "wget"
-brew "zplug"
 brew "zsh"
 brew "zsh-completions"
 brew "argoproj/tap/argo"
 brew "jesseduffield/lazydocker/lazydocker"
 brew "sanemat/font/ricty", args: ["with-powerline"]
+cask "adobe-creative-cloud"
+cask "adoptopenjdk"
 cask "chromedriver"
+cask "goland"
 cask "google-japanese-ime"
 cask "magicavoxel"
+cask "mysqlworkbench"
+cask "notion"
+cask "spotify"
 cask "xquartz"
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "Memory Clean 2", id: 1114591412
+mas "Slack", id: 803453959
 mas "Spark", id: 1176895641
 mas "Tag Editor Free", id: 984278082
 mas "The Unarchiver", id: 425424353
-mas "Trello", id: 1278508951
 mas "TweetDeck", id: 485812721
 mas "VOX", id: 461369673
 mas "Xcode", id: 497799835

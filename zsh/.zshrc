@@ -59,7 +59,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export GOBIN=$GOPATH/bin
 export PATH=$GOPATH:$GOBIN:$PATH
-export GO111MODULE=on
 eval $(/usr/libexec/path_helper -s)
 
 #--------------------
@@ -111,11 +110,12 @@ function peco_select_history() {
 zle -N peco_select_history
 bindkey '^r' peco_select_history
 
+
 #--------------------------------------------
 # gcloud settings
 #--------------------------------------------
-if [ -f '/Users/matsuyuki/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/matsuyuki/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/matsuyuki/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/matsuyuki/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /Users/matsuyuki/go/bin/msg msg

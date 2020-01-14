@@ -27,4 +27,4 @@
     - [git submodule init]
     - [git submodule update --init --recursive, Installing submodules]
     - [git config --global core.excludesfile ~/.gitignore_global, Activating .gitignore_global]
-    - [curl -sL zplug.sh/installer | zsh, Installing zplug]
+    - [curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh]

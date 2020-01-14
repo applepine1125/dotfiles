@@ -9,6 +9,7 @@ tap "mscharley/homebrew"
 tap "neovim/neovim"
 tap "sanemat/font"
 tap "versent/taps"
+brew "anyenv"
 brew "autoconf"
 brew "automake"
 brew "gdbm"
@@ -90,6 +91,7 @@ brew "uncrustify"
 brew "vim"
 brew "yarn"
 brew "zplug"
+brew "wget"
 brew "zsh"
 brew "zsh-completions"
 brew "argoproj/tap/argo"
@@ -97,13 +99,21 @@ brew "lucagrulla/tap/cw"
 brew "sanemat/font/ricty", args: ["with-powerline"]
 brew "versent/taps/saml2aws"
 cask "alacritty"
+cask "adobe-creative-cloud"
+cask "adoptopenjdk"
 cask "chromedriver"
+cask "goland"
+cask "google-cloud-sdk"
 cask "google-japanese-ime"
 cask "sequel-pro-nightly"
+cask "mysqlworkbench"
+cask "notion"
+cask "spotify"
 cask "xquartz"
 mas "Keynote", id: 409183694
 mas "Memory Clean 2", id: 1114591412
+mas "Slack", id: 803453959
 mas "Spark", id: 1176895641
 mas "The Unarchiver", id: 425424353
-mas "Trello", id: 1278508951
+mas "TweetDeck", id: 485812721
 mas "Xcode", id: 497799835

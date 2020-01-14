@@ -43,5 +43,13 @@ Then, set font *ricty for powerline* in terminal settings
 ```
 git clone https://github.com/riywo/anyenv ~/.anyenv
 exec $SHELL -l
+anyenv install --init
+```
+
+### vim, neovim
+If get errors concerned python, install python3 and reinstall pynvim and neovim using pip 
+```
+pip3 uninstall pynvim neovim
+pip3 install pynvim neovim
 ```
 

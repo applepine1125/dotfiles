@@ -21,7 +21,7 @@
     ~/.tmux: tmux/.tmux
     ~/.tmux-powerlinerc: tmux/.tmux-powerlinerc
     ~/.gitignore_global: git/.gitignore_global
-    ~/.latexmkrc: tex/.latexmkrc
+    ~/.config/alacritty/alacritty.yml: termimal/alacritty.yml
 
 - shell:
     - [git submodule init]

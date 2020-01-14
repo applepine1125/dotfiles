@@ -91,11 +91,6 @@ on_ft = ['markdown', 'md']
 repo = 'lazywei/vim-matlab'
 on_ft = ['matlab', 'm']
 
-#tex
-[[plugins]]
-repo = 'lervag/vimtex'
-on_ft = ['tex']
-
 #uml
 [[plugins]]
 repo = 'scrooloose/vim-slumlord'

@@ -2,7 +2,19 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'tpope/vim-obsession'
+repo =  'prabirshrestha/async.vim'
+
+[[plugins]]
+repo =  'prabirshrestha/asyncomplete.vim'
+
+[[plugins]]
+repo =  'prabirshrestha/asyncomplete-lsp.vim'
+
+[[plugins]]
+repo =  'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo =  'mattn/vim-lsp-settings'
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
@@ -14,13 +26,7 @@ on_ft = 'snippet'
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
-repo = 'Shougo/context_filetype.vim'
-
-[[plugins]]
-repo = 'Shougo/neocomplete'
-if = "has('lua')"
-depends = 'context_filetype.vim'
-on_event = 'InsertEnter'
+repo = 'tpope/vim-obsession'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -38,9 +44,6 @@ repo = 'Xuyuanp/nerdtree-git-plugin'
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
-repo = 'simeji/winresizer'
-
-[[plugins]]
 repo = 'vim-airline/vim-airline'
 
 [[plugins]]
@@ -50,26 +53,27 @@ repo = 'vim-airline/vim-airline-themes'
 repo = 'w0ng/vim-hybrid'
 
 [[plugins]]
-repo = 'mattn/sonictemplate-vim'
+repo = 'w0rp/ale'
 
 [[plugins]]
-repo = 'ctrlpvim/ctrlp.vim'
+repo = 'mattn/sonictemplate-vim'
 
 [[plugins]]
 repo = 'tpope/vim-endwise'
 
 [[plugins]]
-repo = 'w0rp/ale'
-
-[[plugins]]
-repo='junegunn/vim-easy-align'
-
-[[plugins]]
-repo = 'tomtom/tcomment_vim'
-
-[[plugins]]
 repo = 'Lokaltog/vim-easymotion'
 
 [[plugins]]
-repo = 'vim-scripts/dbext.vim'
+repo = 'simeji/winresizer'
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+on_source = '''
+if !exists('g:tcomment_types')
+	let g:tcomment_types = {}
+endif
+let g:tcomment_types['toml'] = '# %s'
+'''
+
 

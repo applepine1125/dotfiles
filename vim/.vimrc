@@ -130,6 +130,15 @@ nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 
 "--------------------------------------------
+"# tcomment_vim settings
+"--------------------------------------------
+if !exists('g:tcomment_types')
+	let g:tcomment_types = {}
+endif
+let g:tcomment_types['toml'] = '# %s'
+
+
+"--------------------------------------------
 "# vim-lsp settings
 "--------------------------------------------
 nmap <silent> gd :LspDefinition<CR>
@@ -137,10 +146,21 @@ nmap <silent> <f2> :LspRename<CR>
 nmap <silent> <Leader>d :LspTypeDefinition<CR>
 nmap <silent> <Leader>r :LspReferences<CR>
 nmap <silent> <Leader>i :LspImplementation<CR>
-let g:lsp_diagnostics_enabled = 1
-let g:lsp_diagnostics_echo_cursor = 1
-let g:asyncomplete_popup_delay = 200
+let g:asyncomplete_auto_popup = 1
+let g:asyncomplete_popup_delay = 100
+
+let g:lsp_diagnostics_enabled = 0 " disable error popups from linter
+let g:lsp_diagnostics_echo_cursor = 0
 let g:lsp_text_edit_enabled = 0
+let g:lsp_settings_filetype_go = ['gopls']
+
+"--------------------------------------------
+"# vim-lsp-snippets settings
+"--------------------------------------------
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
 
 "--------------------------------------------
 "# vim-markdown settings

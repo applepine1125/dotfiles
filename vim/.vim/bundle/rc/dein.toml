@@ -1,6 +1,10 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+# vim lsp plugins
+[[plugins]]
+repo =  'prabirshrestha/vim-lsp'
+
 [[plugins]]
 repo =  'prabirshrestha/async.vim'
 
@@ -11,19 +15,19 @@ repo =  'prabirshrestha/asyncomplete.vim'
 repo =  'prabirshrestha/asyncomplete-lsp.vim'
 
 [[plugins]]
-repo =  'prabirshrestha/vim-lsp'
-
-[[plugins]]
 repo =  'mattn/vim-lsp-settings'
 
+
+# vim-slp-snippets plugins 
 [[plugins]]
-repo = 'Shougo/neosnippet.vim'
-depends = ['neosnippet-snippets', 'context_filetype.vim']
-on_event = 'InsertCharPre'
-on_ft = 'snippet'
+repo = 'thomasfaingnaert/vim-lsp-snippets'
 
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+repo = 'SirVer/ultisnips'
+
+[[plugins]]
+repo = 'thomasfaingnaert/vim-lsp-ultisnips'
+
 
 [[plugins]]
 repo = 'tpope/vim-obsession'
@@ -69,11 +73,3 @@ repo = 'simeji/winresizer'
 
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
-on_source = '''
-if !exists('g:tcomment_types')
-	let g:tcomment_types = {}
-endif
-let g:tcomment_types['toml'] = '# %s'
-'''
-
-

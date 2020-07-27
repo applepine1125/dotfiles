@@ -16,6 +16,8 @@ set list
 set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set updatetime=100 " refresh timing for vim-gitgutter
 
+let mapleader = "\<Space>"
+
 filetype plugin indent on
 
 " autocmd
@@ -64,22 +66,38 @@ syntax enable
 
 
 "--------------------------------------------
+"# vim-lsp settings
+"--------------------------------------------
+nmap gd :LspDefinition<CR> 
+nmap gt :LspTypeDefinition<CR>
+nmap gi :LspImplementation<CR>
+nmap gr :LspReferences<CR>
+nmap gb <C-o> " back from definition 
+nmap <f2> :LspRename<CR>
+
+let g:asyncomplete_auto_popup = 1
+let g:asyncomplete_popup_delay = 100
+let g:lsp_settings_filetype_go = ['gopls']
+
+let g:lsp_diagnostics_enabled = 0 " disable error popups from linter
+let g:lsp_diagnostics_echo_cursor = 0
+let g:lsp_text_edit_enabled = 0
+
+
+"--------------------------------------------
+"# vim-lsp-snippets settings
+"--------------------------------------------
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+
+"--------------------------------------------
 "# vim-airline settings
 "--------------------------------------------
 let g:airline_powerline_fonts = 1
 set laststatus=2
 let g:airline_theme = 'molokai'
-
-
-"--------------------------------------------
-"# neosnippet settings
-"--------------------------------------------
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-      \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 
 "--------------------------------------------
@@ -139,32 +157,14 @@ let g:tcomment_types['toml'] = '# %s'
 
 
 "--------------------------------------------
-"# vim-lsp settings
-"--------------------------------------------
-nmap <silent> gd :LspDefinition<CR>
-nmap <silent> <f2> :LspRename<CR>
-nmap <silent> <Leader>d :LspTypeDefinition<CR>
-nmap <silent> <Leader>r :LspReferences<CR>
-nmap <silent> <Leader>i :LspImplementation<CR>
-let g:asyncomplete_auto_popup = 1
-let g:asyncomplete_popup_delay = 100
-
-let g:lsp_diagnostics_enabled = 0 " disable error popups from linter
-let g:lsp_diagnostics_echo_cursor = 0
-let g:lsp_text_edit_enabled = 0
-let g:lsp_settings_filetype_go = ['gopls']
-
-"--------------------------------------------
-"# vim-lsp-snippets settings
-"--------------------------------------------
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-
-"--------------------------------------------
 "# vim-markdown settings
 "--------------------------------------------
 let g:vim_markdown_conceal = 1
 let g:previm_show_header = 0
 let g:vim_markdown_folding_disabled = 2
+
+
+"--------------------------------------------
+"# vim-markdown settings
+"--------------------------------------------
+let g:gotets_bin = $GOPATH . '/bin/gotests'

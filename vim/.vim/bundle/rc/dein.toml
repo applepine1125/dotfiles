@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# vim lsp plugins
+# vim-lsp plugins
 [[plugins]]
 repo =  'prabirshrestha/vim-lsp'
 
@@ -18,7 +18,7 @@ repo =  'prabirshrestha/asyncomplete-lsp.vim'
 repo =  'mattn/vim-lsp-settings'
 
 
-# vim-slp-snippets plugins 
+# vim-lsp-snippets plugins 
 [[plugins]]
 repo = 'thomasfaingnaert/vim-lsp-snippets'
 
@@ -73,3 +73,6 @@ repo = 'simeji/winresizer'
 
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+repo = 'vim-test/vim-test'

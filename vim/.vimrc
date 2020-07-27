@@ -79,7 +79,7 @@ let g:asyncomplete_auto_popup = 1
 let g:asyncomplete_popup_delay = 100
 let g:lsp_settings_filetype_go = ['gopls']
 
-let g:lsp_diagnostics_enabled = 0 " disable error popups from linter
+let g:lsp_diagnostics_enabled = 0 " disable linter error popups
 let g:lsp_diagnostics_echo_cursor = 0
 let g:lsp_text_edit_enabled = 0
 

@@ -4,6 +4,9 @@ export MESSAGING_USER=matsuyuki
 
 export LANG=ja_JP.UTF-8
 
+# local local zshrc
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
 # history setting
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

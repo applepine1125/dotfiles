@@ -17,12 +17,13 @@ Open terminal settings, click `Import`, and select file Solarized_fixed.terminal
 ```
 brew tap Homebrew/bundle
 cd ~/dotfiles/brew
-brew bundle
+brew bundle 
 ```
 
 If you want create Brewfile  
 ```
-brew bundle dump
+cd ~/dotfiles/brew
+brew bundle dump --force
 ```
 
 
@@ -37,14 +38,6 @@ fc-cache -vf
 exec $SHELL -l
 ```
 Then, set font *ricty for powerline* in terminal settings
-
-### anyenv  
-[https://github.com/riywo/anyenv](https://github.com/riywo/anyenv)  
-```
-git clone https://github.com/riywo/anyenv ~/.anyenv
-exec $SHELL -l
-anyenv install --init
-```
 
 ### vim, neovim
 If get errors concerned python, install python3 and reinstall pynvim and neovim using pip 

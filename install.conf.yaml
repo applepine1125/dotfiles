@@ -27,4 +27,3 @@
     - [git submodule init]
     - [git submodule update --init --recursive, Installing submodules]
     - [git config --global core.excludesfile ~/.gitignore_global, Activating .gitignore_global]
-    - [zcompile ~/.zshrc]

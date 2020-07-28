@@ -4,10 +4,6 @@ export MESSAGING_USER=matsuyuki
 
 export LANG=ja_JP.UTF-8
 
-if [ ~/.zshrc -nt ~/.zshrc.zwc ]; then
-   zcompile ~/.zshrc
-fi
-
 # history setting
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -37,9 +33,10 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias cat='cat -n'
 alias less='less -NM'
-alias lzd='lazydocker'
 alias source='source '
-alias activate=/Users/matsuyuki/.anyenv/envs/pyenv/versions/anaconda3-5.3.0/bin/activate
+
+# asdf(manage multiple runtime versions) setup
+. $(brew --prefix asdf)/asdf.sh
 
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
@@ -64,18 +61,6 @@ export GOBIN=$GOPATH/bin
 export PATH=$GOPATH:$GOBIN:$PATH
 eval $(/usr/libexec/path_helper -s)
 
-#--------------------
-#anyenv
-#--------------------
-if [ -d ${HOME}/.anyenv ] ; then
-  export PATH="$HOME/.anyenv/bin:$PATH"
-  eval "$(anyenv init -)"
-  for D in `find $HOME/.anyenv/envs -type d -d 1`
-    do
-      export PATH="$D/shims:$PATH"
-    done
-fi
-
 #--------------------------------------------
 # peco settings
 #--------------------------------------------
@@ -95,7 +80,6 @@ function peco_select_history() {
 zle -N peco_select_history
 bindkey '^r' peco_select_history
 
-
 #--------------------------------------------
 # gcloud settings
 #--------------------------------------------
@@ -109,7 +93,6 @@ complete -o nospace -C /Users/matsuyuki/go/bin/msg msg
 # flutter settings
 #--------------------------------------------
 export PATH=$PATH:$HOME/flutter/bin
-
 
 #--------------------------------------------
 # fzf settings

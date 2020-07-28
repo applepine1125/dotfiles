@@ -40,9 +40,8 @@ exec $SHELL -l
 Then, set font *ricty for powerline* in terminal settings
 
 ### vim, neovim
-If get errors concerned python, install python3 and reinstall pynvim and neovim using pip 
+If get errors concerned python, install python3 and reinstall pynvim using pip 
 ```
-pip3 uninstall pynvim neovim
-pip3 install pynvim neovim
+python3 -m pip install --user --upgrade pynvim
 ```
 

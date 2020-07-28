@@ -2,9 +2,11 @@ autoload -Uz compinit
 compinit -C
 export MESSAGING_USER=matsuyuki
 
-source ~/.zplug/init.zsh
 export LANG=ja_JP.UTF-8
 
+if [ ~/.zshrc -nt ~/.zshrc.zwc ]; then
+   zcompile ~/.zshrc
+fi
 
 # history setting
 HISTFILE=~/.zsh_history
@@ -74,19 +76,6 @@ if [ -d ${HOME}/.anyenv ] ; then
     done
 fi
 
-#--------------------
-#zplug
-#--------------------
-zplug "b4b4r07/emoji-cli"
-
-if ! zplug check --verbose; then
-  printf "Install? [y/N]: "
-  if read -q; then
-    echo; zplug install
-  fi
-fi
-zplug load --verbose
-
 #--------------------------------------------
 # peco settings
 #--------------------------------------------
@@ -127,3 +116,9 @@ export PATH=$PATH:$HOME/flutter/bin
 #--------------------------------------------
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# end profile zsh
+# if (which zprof > /dev/null 2>&1) ;then
+#   zprof
+# fi

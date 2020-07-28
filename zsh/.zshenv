@@ -11,3 +11,5 @@ if [ -x /usr/libexec/path_helper ]; then
     fi
 fi
 
+# starting profie zsh
+# zmodload zsh/zprof && zprof

@@ -3,8 +3,9 @@ compinit -C
 export MESSAGING_USER=matsuyuki
 
 source ~/.zplug/init.zsh
-
 export LANG=ja_JP.UTF-8
+
+
 # history setting
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -60,11 +61,6 @@ export PATH=$PATH:/usr/local/go/bin
 export GOBIN=$GOPATH/bin
 export PATH=$GOPATH:$GOBIN:$PATH
 eval $(/usr/libexec/path_helper -s)
-
-#--------------------
-#aws
-#--------------------
-export AWS_PROFILE=development
 
 #--------------------
 #anyenv
@@ -124,3 +120,10 @@ complete -o nospace -C /Users/matsuyuki/go/bin/msg msg
 # flutter settings
 #--------------------------------------------
 export PATH=$PATH:$HOME/flutter/bin
+
+
+#--------------------------------------------
+# fzf settings
+#--------------------------------------------
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

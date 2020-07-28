@@ -16,6 +16,15 @@ set list
 set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set updatetime=100 " refresh timing for vim-gitgutter
 
+" moving buffer settings
+nnoremap bp :bprevious<CR>
+nnoremap bn :bnext<CR>
+nnoremap bb :b#<CR>
+nnoremap bf :bf<CR>
+nnoremap bl :bl<CR>
+nnoremap bm :bm<CR>
+nnoremap bd :bdelete<CR>
+
 let mapleader = "\<Space>"
 
 filetype plugin indent on
@@ -56,14 +65,12 @@ if dein#check_install()
   call dein#install()
 endif
 
-
 "--------------------------------------------
 "# hybrid colorscheme
 "--------------------------------------------
 colorscheme hybrid
 set background=dark
 syntax enable
-
 
 "--------------------------------------------
 "# vim-lsp settings
@@ -83,7 +90,6 @@ let g:lsp_diagnostics_enabled = 0 " disable linter error popups
 let g:lsp_diagnostics_echo_cursor = 0
 let g:lsp_text_edit_enabled = 0
 
-
 "--------------------------------------------
 "# vim-lsp-snippets settings
 "--------------------------------------------
@@ -91,6 +97,11 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+"--------------------------------------------
+"# fzf settings
+"--------------------------------------------
+let g:fzf_buffers_jump = 1
+let g:fzf_preview_window = ''
 
 "--------------------------------------------
 "# vim-airline settings
@@ -99,14 +110,12 @@ let g:airline_powerline_fonts = 1
 set laststatus=2
 let g:airline_theme = 'molokai'
 
-
 "--------------------------------------------
 "# NERDtree, NERDTreeTabs settings
 "--------------------------------------------
 let NERDTreeShowHidden = 1
 autocmd VimEnter * if argc() ==  0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeTabsToggle<CR>
-
 
 "--------------------------------------------
 "# ale settings
@@ -130,7 +139,6 @@ let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
-
 "--------------------------------------------
 "# easymotion settings
 "--------------------------------------------
@@ -146,7 +154,6 @@ nmap <Leader>l <Plug>(easymotion-overwin-line)
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
-
 "--------------------------------------------
 "# tcomment_vim settings
 "--------------------------------------------
@@ -155,7 +162,6 @@ if !exists('g:tcomment_types')
 endif
 let g:tcomment_types['toml'] = '# %s'
 
-
 "--------------------------------------------
 "# vim-markdown settings
 "--------------------------------------------
@@ -163,8 +169,7 @@ let g:vim_markdown_conceal = 1
 let g:previm_show_header = 0
 let g:vim_markdown_folding_disabled = 2
 
-
 "--------------------------------------------
-"# vim-markdown settings
+"# gotests-vim settings
 "--------------------------------------------
 let g:gotets_bin = $GOPATH . '/bin/gotests'

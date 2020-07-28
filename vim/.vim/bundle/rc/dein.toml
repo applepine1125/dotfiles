@@ -76,3 +76,11 @@ repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
 repo = 'vim-test/vim-test'
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'

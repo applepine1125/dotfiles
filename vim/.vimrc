@@ -69,11 +69,11 @@ syntax enable
 "# vim-lsp settings
 "--------------------------------------------
 nmap gd :LspDefinition<CR> 
-nmap gt :LspTypeDefinition<CR>
+nmap gD :LspTypeDefinition<CR>
 nmap gi :LspImplementation<CR>
 nmap gr :LspReferences<CR>
 nmap gb <C-o> " back from definition 
-nmap <f2> :LspRename<CR>
+nmap gn :LspRename<CR>
 
 let g:asyncomplete_auto_popup = 1
 let g:asyncomplete_popup_delay = 100
@@ -139,8 +139,8 @@ nmap s <Plug>(easymotion-overwin-f2)
 vmap s <Plug>(easymotion-bd-f2)
 
 " Move to line
-map <Leader>L <Plug>(easymotion-bd-jk)
-nmap <Leader>L <Plug>(easymotion-overwin-line)
+map <Leader>l <Plug>(easymotion-bd-jk)
+nmap <Leader>l <Plug>(easymotion-overwin-line)
 
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)

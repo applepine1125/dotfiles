@@ -7,7 +7,6 @@
 - clean: ['~']
 
 - link:
-    ~/.eslintrc.json: vim/eslintrc.json
     ~/.zprezto: zsh/zprezto/
     ~/.vim: vim/.vim/
     ~/.vimrc: vim/.vimrc

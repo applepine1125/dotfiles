@@ -25,9 +25,6 @@ setopt list_packed
 setopt correct
 setopt no_beep
 
-# show branch in tmux
-PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
-
 # alias
 alias ls='ls -aF'
 alias ll='ls -l'
@@ -108,3 +105,6 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 # if (which zprof > /dev/null 2>&1) ;then
 #   zprof
 # fi
+#
+# show branch in tmux
+PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'

@@ -1,1 +1,0 @@
-/Users/matsuyuki/dotfiles/vim/.vimrc

@@ -8,6 +8,7 @@
 
 - link:
     ~/.zprezto: zsh/zprezto/
+    ~/dotfiles/vim/.vim/nvim/init.vim: vim/.vimrc 
     ~/.vim: vim/.vim/
     ~/.vimrc: vim/.vimrc
     ~/.zlogin: zsh/.zlogin
@@ -20,7 +21,7 @@
     ~/.tmux: tmux/.tmux
     ~/.tmux-powerlinerc: tmux/.tmux-powerlinerc
     ~/.gitignore_global: git/.gitignore_global
-    ~/.config/alacritty/alacritty.yml: termimal/alacritty.yml
+    ~/.config/alacritty/alacritty.yml: alacritty/alacritty.yml
 
 - shell:
     - [git submodule init]

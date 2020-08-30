@@ -1,10 +1,9 @@
 autoload -Uz compinit
 compinit -C
-export MESSAGING_USER=matsuyuki
 
 export LANG=ja_JP.UTF-8
 
-# local local zshrc
+# local zshrc
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 # history setting

@@ -93,12 +93,7 @@ cask "spotify"
 cask "xquartz"
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
-mas "LINE", id: 539883307
 mas "Memory Clean 2", id: 1114591412
 mas "Slack", id: 803453959
-mas "Spark", id: 1176895641
-mas "Tag Editor Free", id: 984278082
 mas "The Unarchiver", id: 425424353
-mas "TweetDeck", id: 485812721
-mas "VOX", id: 461369673
 mas "Xcode", id: 497799835

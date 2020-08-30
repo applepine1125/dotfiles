@@ -1,6 +1,8 @@
 # applepine1125's dotfiles
 simply dotfiles for zsh, vim, tmux etc... and installing system using [Dotbot](https://github.com/anishathalye/dotbot)
 
+## Dependencies
+brew https://brew.sh/index_ja
 ## Installation  
 ### dotfiles
 clone this repository and install dotfiles.
@@ -10,8 +12,8 @@ git clone https://github.com/applepine1125/dotfiles
 cd ~/dotfiles
 ./install
 ```
-### terminal theme  
-Open terminal settings, click `Import`, and select file Solarized_fixed.terminal in `~/dotfiles`
+### terminal.app theme  
+Open terminal.app settings, click `Import`, and select file Solarized_fixed.terminal in `~/dotfiles`
 
 ### brew package, App from cask and mas  
 ```
@@ -32,7 +34,7 @@ brew bundle dump --force
 brew update
 brew uninstall ricty
 brew tap sanemat/font
-brew install ricty --vim-powerline --powerline
+brew install ricty  --with-powerline
 cp -f /usr/local/Cellar/ricty/{your directory version}/share/fonts/Ricty*.ttf ~/Library/Fonts/ 
 fc-cache -vf
 exec $SHELL -l

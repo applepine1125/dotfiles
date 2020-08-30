@@ -17,13 +17,13 @@ set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set updatetime=100 " refresh timing for vim-gitgutter
 
 " moving buffer settings
-nnoremap bp :bprevious<CR>
-nnoremap bn :bnext<CR>
-nnoremap bb :b#<CR>
-nnoremap bf :bf<CR>
-nnoremap bl :bl<CR>
-nnoremap bm :bm<CR>
-nnoremap bd :bdelete<CR>
+nnoremap Bp :bprevious<CR>
+nnoremap Bn :bnext<CR>
+nnoremap Bb :b#<CR>
+nnoremap Bf :bf<CR>
+nnoremap Bl :bl<CR>
+nnoremap Bm :bm<CR>
+nnoremap Bd :bdelete<CR>
 
 let mapleader = "\<Space>"
 

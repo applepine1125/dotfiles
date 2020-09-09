@@ -17,13 +17,13 @@ set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set updatetime=100 " refresh timing for vim-gitgutter
 
 " moving buffer settings
-nnoremap Bp :bprevious<CR>
-nnoremap Bn :bnext<CR>
-nnoremap Bb :b#<CR>
-nnoremap Bf :bf<CR>
-nnoremap Bl :bl<CR>
-nnoremap Bm :bm<CR>
-nnoremap Bd :bdelete<CR>
+" nnoremap Bp :bprevious<CR>
+" nnoremap Bn :bnext<CR>
+" nnoremap Bb :b#<CR>
+" nnoremap Bf :bf<CR>
+" nnoremap Bl :bl<CR>
+" nnoremap Bm :bm<CR>
+" nnoremap Bd :bdelete<CR>
 
 let mapleader = "\<Space>"
 
@@ -31,6 +31,7 @@ filetype plugin indent on
 
 " autocmd
 au BufRead,BufNewFile *.uml set filetype=uml
+au BufRead,BufNewFile *.tf set filetype=terraform 
 au ColorScheme * highlight LineNr ctermfg=240
 au QuickFixCmdPost *grep* cwindow
 if executable('jvgrep')

@@ -1,5 +1,10 @@
-autoload -Uz compinit
-compinit -C
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$(brew --prefix asdf)/etc/bash_completion.da:$FPATH
+
+  autoload -Uz compinit
+  compinit -C
+fi
+
 
 export LANG=ja_JP.UTF-8
 
@@ -100,10 +105,25 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
+# show branch in tmux
+PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
+
+#--------------------------------------------
+# asdf settings
+#--------------------------------------------
+export PATH=$HOME/.asdf/bin:$PATH
+
+. /usr/local/opt/asdf/asdf.sh
+
 # end profile zsh
 # if (which zprof > /dev/null 2>&1) ;then
 #   zprof
 # fi
 #
-# show branch in tmux
-PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
+
+#--------------------------------------------
+# terraform settings
+#--------------------------------------------
+complete -o nospace -C /usr/local/bin/terraform terraform

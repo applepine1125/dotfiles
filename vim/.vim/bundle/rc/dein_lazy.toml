@@ -57,3 +57,11 @@ hook_add = '''
 let g:terraform_fmt_on_save=1
 '''
 
+# flutter 
+[[plugins]]
+repo = 'dart-lang/dart-vim-plugin'
+on_ft = 'dart'
+
+[[plugins]]
+repo = 'thosakwe/vim-flutter'
+on_ft = 'dart'

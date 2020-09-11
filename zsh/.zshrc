@@ -126,4 +126,4 @@ export PATH=$HOME/.asdf/bin:$PATH
 #--------------------------------------------
 # terraform settings
 #--------------------------------------------
-complete -o nospace -C /usr/local/bin/terraform terraform
+complete -o nospace -C ~/.asdf/shims/terraform terraform

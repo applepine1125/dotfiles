@@ -17,17 +17,16 @@ set listchars=tab:--,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set updatetime=100 " refresh timing for vim-gitgutter
 
 " moving buffer settings
-" nnoremap Bp :bprevious<CR>
-" nnoremap Bn :bnext<CR>
-" nnoremap Bb :b#<CR>
-" nnoremap Bf :bf<CR>
-" nnoremap Bl :bl<CR>
-" nnoremap Bm :bm<CR>
-" nnoremap Bd :bdelete<CR>
+nnoremap Bp :bprevious<CR>
+nnoremap Bn :bnext<CR>
+nnoremap Bb :b#<CR>
+nnoremap Bf :bf<CR>
+nnoremap Bl :bl<CR>
+nnoremap Bm :bm<CR>
+nnoremap Bd :bdelete<CR>
 
 let mapleader = "\<Space>"
 
-filetype plugin indent on
 
 " autocmd
 au BufRead,BufNewFile *.uml set filetype=uml
@@ -66,6 +65,7 @@ if dein#check_install()
   call dein#install()
 endif
 
+filetype plugin indent on
 "--------------------------------------------
 "# hybrid colorscheme
 "--------------------------------------------
@@ -174,3 +174,8 @@ let g:vim_markdown_folding_disabled = 2
 "# gotests-vim settings
 "--------------------------------------------
 let g:gotets_bin = $GOPATH . '/bin/gotests'
+
+"--------------------------------------------
+"# vim-terraform settings
+"--------------------------------------------
+let g:terraform_fmt_on_save=1

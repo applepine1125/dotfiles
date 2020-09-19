@@ -2,9 +2,9 @@ if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$(brew --prefix asdf)/etc/bash_completion.da:$FPATH
 
   autoload -Uz compinit
+  autoload -U +X bashcompinit && bashcompinit
   compinit -C
 fi
-
 
 export LANG=ja_JP.UTF-8
 
@@ -90,7 +90,6 @@ bindkey '^r' peco_select_history
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
-autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /Users/matsuyuki/go/bin/msg msg
 
 #--------------------------------------------
@@ -124,6 +123,13 @@ export PATH=$HOME/.asdf/bin:$PATH
 
 
 #--------------------------------------------
+# aws settings
+#--------------------------------------------
+complete -C '/usr/local/bin/aws_completer' aws
+
+
+#--------------------------------------------
 # terraform settings
 #--------------------------------------------
 complete -o nospace -C ~/.asdf/shims/terraform terraform
+alias tf='terraform'

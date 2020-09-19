@@ -27,6 +27,12 @@ nnoremap Bd :bdelete<CR>
 
 let mapleader = "\<Space>"
 
+" completion quotes, brackets
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
 
 " autocmd
 au BufRead,BufNewFile *.uml set filetype=uml

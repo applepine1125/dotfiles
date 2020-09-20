@@ -107,11 +107,11 @@ let g:lsp_text_edit_enabled = 0
 "--------------------------------------------
 let g:asyncomplete_auto_popup = 1
 
-let g:asyncomplete_popup_delay = 50 
+let g:asyncomplete_popup_delay = 200 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
-
+" inoremap <expr> <CR>    pumvisible() ? "\<C-y>\<CR>" : "\<CR>"
+" imap <c-space> <Plug>(asyncomplete_force_refresh)
 
 "--------------------------------------------
 "# vim-lsp-snippets settings

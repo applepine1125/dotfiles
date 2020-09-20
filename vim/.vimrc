@@ -71,6 +71,14 @@ if dein#check_install()
   call dein#install()
 endif
 
+" uninstalling unused plugins
+let s:removed_plugins = dein#check_clean()
+if len(s:removed_plugins) > 0
+  call map(s:removed_plugins, delete('v:val, "rf"'))
+  call dein#recache_runtimepath()
+endif
+
+
 filetype plugin indent on
 "--------------------------------------------
 "# hybrid colorscheme
@@ -89,20 +97,31 @@ nmap gr :LspReferences<CR>
 nmap gb <C-o> " back from definition 
 nmap gn :LspRename<CR>
 
-let g:asyncomplete_auto_popup = 1
-let g:asyncomplete_popup_delay = 100
 let g:lsp_settings_filetype_go = ['gopls']
-
 let g:lsp_diagnostics_enabled = 0 " disable linter error popups
 let g:lsp_diagnostics_echo_cursor = 0
 let g:lsp_text_edit_enabled = 0
 
 "--------------------------------------------
+"# asyncomplete settings
+"--------------------------------------------
+let g:asyncomplete_auto_popup = 1
+
+let g:asyncomplete_popup_delay = 50 
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+
+
+"--------------------------------------------
 "# vim-lsp-snippets settings
 "--------------------------------------------
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" let g:UltiSnipsExpandTrigger="<Tab>"
+" let g:UltiSnipsJumpForwardTrigger="<Tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+" let g:UltiSnipsEditSplit="vertical"
+" set completeopt+=menuone
+
 
 "--------------------------------------------
 "# fzf settings

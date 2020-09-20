@@ -3,30 +3,38 @@ repo = 'Shougo/dein.vim'
 
 # vim-lsp plugins
 [[plugins]]
-repo =  'prabirshrestha/vim-lsp'
+repo = 'prabirshrestha/vim-lsp'
 
 [[plugins]]
-repo =  'prabirshrestha/async.vim'
+repo = 'mattn/vim-lsp-settings'
 
 [[plugins]]
-repo =  'prabirshrestha/asyncomplete.vim'
+repo = 'prabirshrestha/async.vim'
 
 [[plugins]]
-repo =  'prabirshrestha/asyncomplete-lsp.vim'
+repo = 'prabirshrestha/asyncomplete.vim'
 
 [[plugins]]
-repo =  'mattn/vim-lsp-settings'
-
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
 
 # vim-lsp-snippets plugins 
-[[plugins]]
-repo = 'thomasfaingnaert/vim-lsp-snippets'
+# [[plugins]]
+# repo = 'thomasfaingnaert/vim-lsp-snippets'
+#
+# [[plugins]]
+# repo = 'SirVer/ultisnips'
+#
+# [[plugins]]
+# repo = 'thomasfaingnaert/vim-lsp-ultisnips'
 
-[[plugins]]
-repo = 'SirVer/ultisnips'
-
-[[plugins]]
-repo = 'thomasfaingnaert/vim-lsp-ultisnips'
+# [[plugins]]
+# repo = 'honza/vim-snippets'
+#
+# [[plugins]]
+# repo = 'hrsh7th/vim-vsnip'
+#
+# [[plugins]]
+# repo = 'hrsh7th/vim-vsnip-integ'
 
 
 [[plugins]]

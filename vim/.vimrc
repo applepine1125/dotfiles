@@ -78,14 +78,17 @@ if len(s:removed_plugins) > 0
   call dein#recache_runtimepath()
 endif
 
-
 filetype plugin indent on
+
 "--------------------------------------------
-"# hybrid colorscheme
+"# colorscheme settings
 "--------------------------------------------
 colorscheme hybrid
 set background=dark
 syntax enable
+
+" bracket highlighting color setting
+hi MatchParen cterm=bold ctermbg=none ctermfg=lightgrey
 
 "--------------------------------------------
 "# vim-lsp settings

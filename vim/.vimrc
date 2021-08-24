@@ -35,7 +35,6 @@ inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 
 " autocmd
-au BufRead,BufNewFile *.uml set filetype=uml
 au BufRead,BufNewFile *.tf set filetype=terraform 
 au ColorScheme * highlight LineNr ctermfg=240
 au QuickFixCmdPost *grep* cwindow
@@ -72,11 +71,11 @@ if dein#check_install()
 endif
 
 " uninstalling unused plugins
-let s:removed_plugins = dein#check_clean()
-if len(s:removed_plugins) > 0
-  call map(s:removed_plugins, delete('v:val, "rf"'))
-  call dein#recache_runtimepath()
-endif
+" let s:removed_plugins = dein#check_clean()
+" if len(s:removed_plugins) > 0
+"   call map(s:removed_plugins, "delete(v:val, 'rf')")
+"   call dein#recache_runtimepath()
+" endif
 
 filetype plugin indent on
 
@@ -93,11 +92,12 @@ hi MatchParen cterm=bold ctermbg=none ctermfg=lightgrey
 "--------------------------------------------
 "# vim-lsp settings
 "--------------------------------------------
-nmap gd :LspDefinition<CR> 
-nmap gD :LspTypeDefinition<CR>
+nmap gf :LspDefinition<CR> 
+nmap gt :LspTypeDefinition<CR>
+nmap gj :LspDeclaration<CR>
 nmap gi :LspImplementation<CR>
 nmap gr :LspReferences<CR>
-nmap gb <C-o> " back from definition 
+nmap gF <C-o> " back from definition 
 nmap gn :LspRename<CR>
 
 let g:lsp_settings_filetype_go = ['gopls']
@@ -207,3 +207,10 @@ let g:gotets_bin = $GOPATH . '/bin/gotests'
 "# vim-terraform settings
 "--------------------------------------------
 let g:terraform_fmt_on_save=1
+
+"--------------------------------------------
+"# uml settings
+"--------------------------------------------
+au BufRead,BufNewFile *.uml set filetype=uml
+au BufRead,BufNewFile *.puml set filetype=uml
+let g:preview_uml_url='http://localhost:8888'

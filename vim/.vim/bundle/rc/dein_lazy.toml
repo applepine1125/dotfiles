@@ -36,15 +36,6 @@ on_ft = ['markdown', 'md']
 repo = 'tyru/open-browser.vim'
 on_ft = ['markdown', 'md']
 
-#uml
-[[plugins]]
-repo = 'scrooloose/vim-slumlord'
-on_ft = ['pu','uml']
-
-[[plugins]]
-repo = 'aklt/plantuml-syntax'
-on_ft = ['pu','uml']
-
 #Dockerfile
 [[plugins]]
 repo = 'ekalinin/Dockerfile.vim'
@@ -63,3 +54,8 @@ on_ft = 'dart'
 [[plugins]]
 repo = 'thosakwe/vim-flutter'
 on_ft = 'dart'
+
+#uml
+[[plugins]]
+repo = 'skanehira/preview-uml.vim'
+on_ft = 'uml'

@@ -3,7 +3,7 @@ if type brew &>/dev/null; then
 
   autoload -Uz compinit
   autoload -U +X bashcompinit && bashcompinit
-  compinit -C
+  compinit -Ci
 fi
 
 export LANG=ja_JP.UTF-8
@@ -35,7 +35,6 @@ alias ll='ls -l'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias cat='cat -n'
 alias less='less -NM'
 alias source='source '
 
@@ -85,14 +84,6 @@ zle -N peco_select_history
 bindkey '^r' peco_select_history
 
 #--------------------------------------------
-# gcloud settings
-#--------------------------------------------
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
-
-complete -o nospace -C /Users/matsuyuki/go/bin/msg msg
-
-#--------------------------------------------
 # flutter settings
 #--------------------------------------------
 export PATH=$PATH:$HOME/flutter/bin
@@ -103,7 +94,6 @@ export PATH=$PATH:$HOME/flutter/bin
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
 # show branch in tmux
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
@@ -112,15 +102,7 @@ PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -
 # asdf settings
 #--------------------------------------------
 export PATH=$HOME/.asdf/bin:$PATH
-
 . /usr/local/opt/asdf/asdf.sh
-
-# end profile zsh
-# if (which zprof > /dev/null 2>&1) ;then
-#   zprof
-# fi
-#
-
 
 #--------------------------------------------
 # aws settings
@@ -133,3 +115,4 @@ complete -C '/usr/local/bin/aws_completer' aws
 #--------------------------------------------
 complete -o nospace -C ~/.asdf/shims/terraform terraform
 alias tf='terraform'
+export PATH="/usr/local/opt/libiconv/bin:$PATH"

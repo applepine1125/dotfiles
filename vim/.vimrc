@@ -28,11 +28,11 @@ nnoremap Bd :bdelete<CR>
 let mapleader = "\<Space>"
 
 " completion quotes, brackets
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
+" inoremap { {}<LEFT>
+" inoremap [ []<LEFT>
+" inoremap ( ()<LEFT>
+" inoremap " ""<LEFT>
+" inoremap ' ''<LEFT>
 
 " autocmd
 au BufRead,BufNewFile *.tf set filetype=terraform 

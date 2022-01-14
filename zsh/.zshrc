@@ -3,10 +3,11 @@ if type brew &>/dev/null; then
 
   autoload -Uz compinit
   autoload -U +X bashcompinit && bashcompinit
-  compinit -Ci
+  compinit -Ciu
 fi
 
 export LANG=ja_JP.UTF-8
+export APPLE_SSH_ADD_BEHAVIOR=macos
 
 # local zshrc
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

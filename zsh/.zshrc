@@ -6,6 +6,8 @@ if type brew &>/dev/null; then
   compinit -Ciu
 fi
 
+eval "$(direnv hook zsh)"
+
 export LANG=ja_JP.UTF-8
 export APPLE_SSH_ADD_BEHAVIOR=macos
 
@@ -40,7 +42,7 @@ alias less='less -NM'
 alias source='source '
 
 # asdf(manage multiple runtime versions) setup
-. $(brew --prefix asdf)/asdf.sh
+. /usr/local/opt/asdf/libexec/asdf.sh
 
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
@@ -54,6 +56,16 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
+#--------------------
+#rust
+#--------------------
+export PATH=$PATH:$HOME/.cargo/env
+
+#--------------------
+#rust
+#--------------------
+export PATH=$PATH:~/.cargo/bin
 
 #--------------------
 #golang
@@ -103,7 +115,6 @@ PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -
 # asdf settings
 #--------------------------------------------
 export PATH=$HOME/.asdf/bin:$PATH
-. /usr/local/opt/asdf/asdf.sh
 
 #--------------------------------------------
 # aws settings

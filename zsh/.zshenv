@@ -13,3 +13,4 @@ fi
 
 # starting profie zsh
 # zmodload zsh/zprof && zprof
+. "$HOME/.cargo/env"

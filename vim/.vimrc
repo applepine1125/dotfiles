@@ -206,7 +206,7 @@ let g:gotets_bin = $GOPATH . '/bin/gotests'
 "--------------------------------------------
 "# vim-terraform settings
 "--------------------------------------------
-let g:terraform_fmt_on_save=1
+let g:terraform_fmt_on_save = 1
 
 "--------------------------------------------
 "# uml settings
@@ -214,3 +214,8 @@ let g:terraform_fmt_on_save=1
 au BufRead,BufNewFile *.uml set filetype=uml
 au BufRead,BufNewFile *.puml set filetype=uml
 let g:preview_uml_url='http://localhost:8888'
+
+"--------------------------------------------
+"# rust settings
+"--------------------------------------------
+let g:rustfmt_autosave = 1

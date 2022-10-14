@@ -59,3 +59,8 @@ on_ft = 'dart'
 [[plugins]]
 repo = 'skanehira/preview-uml.vim'
 on_ft = 'uml'
+
+#rust
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = ['rust', 'rs']

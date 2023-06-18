@@ -1,28 +1,30 @@
 [submodule "zsh/zprezto"]
 	path = zsh/zprezto
-	url = https://github.com/sorin-ionescu/prezto.git
+	url = git@github.com:sorin-ionescu/prezto.git
 [submodule "dotbot"]
 	path = dotbot
-	url = https://github.com/anishathalye/dotbot
+	url = git@github.com:anishathalye/dotbot.git
 [submodule "tmux/.tmux/tmux-powerline"]
 	path = tmux/.tmux/tmux-powerline
-	url = git://github.com/erikw/tmux-powerline.git
+	url = git@github.com:erikw/tmux-powerline.git
 [submodule "tmux/.tmux/tmux-continuum"]
-	path = tmux/.tmux/plugins/tmux-continuum
-	url = git://github.com/tmux-plugins/tmux-continuum.git
+	path = tmux/.tmux/tmux-continuum
+	url = git@github.com:tmux-plugins/tmux-continuum.git
 [submodule "tmux/.tmux/tmux-copycat"]
-	path = tmux/.tmux/plugins/tmux-copycat
-	url = git://github.com/tmux-plugins/tmux-copycat.git
+	path = tmux/.tmux/tmux-copycat
+	url = git@github.com:tmux-plugins/tmux-copycat.git
 [submodule "tmux/.tmux/tmux-resurrect"]
-	path = tmux/.tmux/plugins/tmux-resurrect
-	url = git://github.com/tmux-plugins/tmux-resurrect.git
+	path = tmux/.tmux/tmux-resurrect
+	url = git@github.com:tmux-plugins/tmux-resurrect.git
 [submodule "tmux/.tmux/tmux-yank"]
-	path = tmux/.tmux/plugins/tmux-yank
-	url = git://github.com/tmux-plugins/tmux-yank.git
+	path = tmux/.tmux/tmux-yank
+	url = git@github.com:tmux-plugins/tmux-yank.git
 [submodule "tmux/.tmux/tmux-mem-cpu-load"]
-	path = tmux/.tmux/plugins/tmux-mem-cpu-load
-	url = git://github.com/thewtex/tmux-mem-cpu-load.git
+	path = tmux/.tmux/tmux-mem-cpu-load
+	url = git@github.com:thewtex/tmux-mem-cpu-load.git
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
-
+	url = git@github.com:tmux-plugins/tpm.git
+[submodule "tmux/.tmux/tpm"]
+	path = tmux/.tmux/tpm
+	url = git@github.com:tmux-plugins/tpm.git

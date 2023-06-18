@@ -44,7 +44,7 @@ repo = 'tpope/vim-obsession'
 repo = 'itchyny/lightline.vim'
 
 [[plugins]]
-repo = 'scrooloose/nerdtree'
+repo = 'preservim/nerdtree'
 
 [[plugins]]
 repo = 'jistr/vim-nerdtree-tabs'

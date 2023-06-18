@@ -1,15 +1,14 @@
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$(brew --prefix asdf)/etc/bash_completion.da:$FPATH
+eval $(/usr/libexec/path_helper -s)
 
-  autoload -Uz compinit
-  autoload -U +X bashcompinit && bashcompinit
-  compinit -Ciu
-fi
-
-eval "$(direnv hook zsh)"
+FPATH=$(brew --prefix)/share/zsh/site-functions:$(brew --prefix asdf)/etc/bash_completion.da:$FPATH
+autoload -Uz compinit
+autoload -U +X bashcompinit && bashcompinit
+compinit -Ciu
 
 export LANG=ja_JP.UTF-8
 export APPLE_SSH_ADD_BEHAVIOR=macos
+
+eval "$(direnv hook zsh)"
 
 # local zshrc
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
@@ -41,8 +40,9 @@ alias mv='mv -i'
 alias less='less -NM'
 alias source='source '
 
+
 # asdf(manage multiple runtime versions) setup
-. /usr/local/opt/asdf/libexec/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
@@ -57,15 +57,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-#--------------------
-#rust
-#--------------------
-export PATH=$PATH:$HOME/.cargo/env
 
 #--------------------
 #rust
 #--------------------
+export PATH=$PATH:$HOME/.cargo/env
 export PATH=$PATH:~/.cargo/bin
+
 
 #--------------------
 #golang
@@ -75,7 +73,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export GOBIN=$GOPATH/bin
 export PATH=$GOPATH:$GOBIN:$PATH
-eval $(/usr/libexec/path_helper -s)
 
 #--------------------------------------------
 # peco settings
@@ -96,10 +93,12 @@ function peco_select_history() {
 zle -N peco_select_history
 bindkey '^r' peco_select_history
 
+
 #--------------------------------------------
 # flutter settings
 #--------------------------------------------
 export PATH=$PATH:$HOME/flutter/bin
+
 
 #--------------------------------------------
 # fzf settings
@@ -116,6 +115,7 @@ PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -
 #--------------------------------------------
 export PATH=$HOME/.asdf/bin:$PATH
 
+
 #--------------------------------------------
 # aws settings
 #--------------------------------------------
@@ -128,3 +128,5 @@ complete -C '/usr/local/bin/aws_completer' aws
 complete -o nospace -C ~/.asdf/shims/terraform terraform
 alias tf='terraform'
 export PATH="/usr/local/opt/libiconv/bin:$PATH"
+
+alias lzd='lazydocker'

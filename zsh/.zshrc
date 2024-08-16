@@ -1,5 +1,4 @@
 eval $(/usr/libexec/path_helper -s)
-
 FPATH=$(brew --prefix)/share/zsh/site-functions:$(brew --prefix asdf)/etc/bash_completion.da:$FPATH
 autoload -Uz compinit
 autoload -U +X bashcompinit && bashcompinit

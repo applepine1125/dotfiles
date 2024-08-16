@@ -21,6 +21,7 @@
     ~/.tmux: tmux/.tmux
     ~/.tmux-powerlinerc: tmux/.tmux-powerlinerc
     ~/.gitignore_global: git/.gitignore_global
+    ~/.gitconfig: git/.gitconfig
     ~/.config/alacritty/alacritty.yml: alacritty/alacritty.yml
 
 - shell:

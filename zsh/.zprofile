@@ -74,4 +74,5 @@ fi
 TMPPREFIX="${TMPDIR%/}/zsh"
 
 ulimit -n 10000
-export PATH=/usr/local/Cellar/openssl/1.0.2m/bin:/Users/matsuyuki/.anyenv/envs/rbenv/shims:/Users/matsuyuki/.anyenv/envs/pyenv/shims:/Users/matsuyuki/.anyenv/envs/rbenv/shims:/Users/matsuyuki/.anyenv/envs/rbenv/bin:/Users/matsuyuki/.anyenv/envs/pyenv/shims:/Users/matsuyuki/.anyenv/envs/pyenv/bin:/Users/matsuyuki/.anyenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Library/TeX/texbin:/Users/matsuyuki/go:/Users/matsuyuki/go/bin:/Users/matsuyuki/.zplug/bin:/usr/local/sbin:/Users/matsuyuki/.anyenv/envs/rbenv/shims:/Users/matsuyuki/.anyenv/envs/pyenv/shims:/Users/matsuyuki/.anyenv/envs/rbenv/bin:/Users/matsuyuki/.anyenv/envs/pyenv/bin:/Users/matsuyuki/.anyenv/bin:/usr/local/go/bin:/Users/matsuyuki/.nodebrew/current/bin
+export PATH=/usr/local/Cellar/openssl/1.0.2m/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/matsuyuki/go:/Users/matsuyuki/go/bin:/Users/matsuyuki/.zplug/bin:/usr/local/sbin:/usr/local/go/bin
+eval $(/opt/homebrew/bin/brew shellenv)

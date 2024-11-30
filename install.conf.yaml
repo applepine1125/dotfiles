@@ -7,8 +7,7 @@
 - clean: ['~']
 
 - link:
-    ~/.zprezto: zsh/zprezto/
-    ~/dotfiles/vim/.vim/nvim/init.vim: vim/.vimrc 
+    $XDG_CONFIG_HOME/nvim/init.vim: vim/.vimrc 
     ~/.vim: vim/.vim/
     ~/.vimrc: vim/.vimrc
     ~/.zlogin: zsh/.zlogin
@@ -18,13 +17,11 @@
     ~/.zshenv: zsh/.zshenv
     ~/.zshrc: zsh/.zshrc
     ~/.tmux.conf: tmux/.tmux.conf
-    ~/.tmux: tmux/.tmux
-    ~/.tmux-powerlinerc: tmux/.tmux-powerlinerc
     ~/.gitignore_global: git/.gitignore_global
     ~/.gitconfig: git/.gitconfig
-    ~/.config/alacritty/alacritty.yml: alacritty/alacritty.yml
+    ~/.config/alacritty/alacritty.toml: alacritty/alacritty.toml
 
 - shell:
-    - [git submodule init, init git submodule]
-    - [git submodule update --init --recursive, Installing submodules]
+    - [git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto, cloning zprezto]
+    - [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm, cloning Tmux Plugin Manager]
     - [git config --global core.excludesfile ~/.gitignore_global, Activating .gitignore_global]

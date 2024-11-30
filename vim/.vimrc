@@ -49,11 +49,20 @@ let s:dein_dir = $HOME . '/.vim/bundle'
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 " Install dein.vim if not installed yet
+let $CACHE = expand('~/.cache')
+if !($CACHE->isdirectory())
+    call mkdir($CACHE, 'p')
+endif
+
 if &runtimepath !~# '/dein.vim'
-  if !isdirectory(s:dein_repo_dir)
-    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-  endif
-  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+   let s:dir = 'dein.vim'->fnamemodify(':p')
+   if !(s:dir->isdirectory())
+     let s:dir = $CACHE .. '/dein/repos/github.com/Shougo/dein.vim'
+     if !(s:dir->isdirectory())
+       execute '!git clone https://github.com/Shougo/dein.vim' s:dir
+     endif
+   endif
+   set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 endif
 
 " Load plugins
@@ -65,19 +74,13 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
-" If you want to install not installed plugins on startup.
 if dein#check_install()
   call dein#install()
 endif
 
-" uninstalling unused plugins
-" let s:removed_plugins = dein#check_clean()
-" if len(s:removed_plugins) > 0
-"   call map(s:removed_plugins, "delete(v:val, 'rf')")
-"   call dein#recache_runtimepath()
-" endif
-
 filetype plugin indent on
+syntax enable
+
 
 "--------------------------------------------
 "# colorscheme settings
@@ -119,11 +122,11 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "--------------------------------------------
 "# vim-lsp-snippets settings
 "--------------------------------------------
-" let g:UltiSnipsExpandTrigger="<Tab>"
-" let g:UltiSnipsJumpForwardTrigger="<Tab>"
-" let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
-" let g:UltiSnipsEditSplit="vertical"
-" set completeopt+=menuone
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+let g:UltiSnipsEditSplit="vertical"
+set completeopt+=menuone
 
 
 "--------------------------------------------
@@ -135,6 +138,7 @@ let g:fzf_preview_window = ''
 "--------------------------------------------
 "# vim-airline settings
 "--------------------------------------------
+let g:airline#extensions#disable_rtp_load=1
 let g:airline_powerline_fonts = 1
 set laststatus=2
 let g:airline_theme = 'molokai'
@@ -143,7 +147,7 @@ let g:airline_theme = 'molokai'
 "# NERDtree, NERDTreeTabs settings
 "--------------------------------------------
 let NERDTreeShowHidden = 1
-autocmd VimEnter * if argc() ==  0 && !exists("s:std_in") | NERDTree | endif
+" autocmd VimEnter * if argc() ==  0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeTabsToggle<CR>
 
 "--------------------------------------------

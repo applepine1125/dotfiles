@@ -1,6 +1,3 @@
-[[plugins]]
-repo = 'Shougo/dein.vim'
-
 # vim-lsp plugins
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'

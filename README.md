@@ -12,8 +12,6 @@ git clone https://github.com/applepine1125/dotfiles
 cd ~/dotfiles
 ./install
 ```
-### terminal.app theme  
-Open terminal.app settings, click `Import`, and select file Solarized_fixed.terminal in `~/dotfiles`
 
 ### brew package, App from cask and mas  
 ```
@@ -28,22 +26,6 @@ cd ~/dotfiles/brew
 brew bundle dump --force
 ```
 
-
-### ricty font for powerline theme  
-```
-brew update
-brew uninstall ricty
-brew tap sanemat/font
-brew install ricty  --with-powerline
-cp -f /usr/local/Cellar/ricty/{your directory version}/share/fonts/Ricty*.ttf ~/Library/Fonts/ 
-fc-cache -vf
-exec $SHELL -l
-```
-Then, set font *ricty for powerline* in terminal settings
-
-### vim, neovim
-If get errors concerned python, install python3 and reinstall pynvim using pip 
-```
-python3 -m pip install --user --upgrade pynvim
-```
-
+### installing tmux plugins
+Press prefix + I (capital i, as in Install) to fetch the plugin.
+https://github.com/tmux-plugins/tpm

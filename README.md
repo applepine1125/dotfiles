@@ -27,5 +27,5 @@ brew bundle dump --force
 ```
 
 ### installing tmux plugins
-Press prefix + I (capital i, as in Install) to fetch the plugin.
+Press prefix + I (capital i, as in Install) to fetch the plugin.  
 https://github.com/tmux-plugins/tpm
